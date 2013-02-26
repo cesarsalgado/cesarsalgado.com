@@ -1,4 +1,4 @@
-Cesar Salgado's Personal Page
+# [Cesar Salgado's Personal Page](http://cesarsalgado.com)
 
 This is a site I'm building for fun and for learning cool technologies.
 
