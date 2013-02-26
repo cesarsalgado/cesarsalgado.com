@@ -10,7 +10,7 @@ I'm also building this site while taking some online classes in sites such as co
 
 ### Technology features to add
 
-The purpose of this list is to write down items for technology features which I think I should use in my site just for learning purposes.
+The purpose of this list is to write down items for technology features which I think I should use in my site for learning purposes.
 
 html:
 - table
