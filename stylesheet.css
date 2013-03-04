@@ -21,8 +21,8 @@ body div#content {
 }
 
 /* If I want to align this picture uncomment bellow. */
-/*body div#content #my_pic {
+body div#content #my_pic {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}*/
+}
