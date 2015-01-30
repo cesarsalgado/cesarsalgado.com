@@ -61,7 +61,7 @@
             <ul class="nav">
 
               <!-- Home -->
-              <li class="active" >
+              <li class="" >
                 <a href="/">Home</a>
               </li>
 
@@ -88,7 +88,7 @@
               -->
 
               <!-- Contact -->
-              <li class="" >
+              <li class="active" >
                 <a href="/contact">Contact</a>
               </li>
 
@@ -109,12 +109,12 @@
             <ul class="nav">
               <!-- English -->
               <li class="active" >
-                <a href="/">english</a>
+                <a href="/contact/">english</a>
               </li>
 
               <!-- Portuguese -->
               <li class="" >
-                <a href="/pt/">português</a>
+                <a href="/pt/contact/">português</a>
               </li>
             </ul>
           </div>
@@ -127,37 +127,29 @@
 
 <div id="no-sidenav-container" class="container">
 
-  <section>
+  <section id="contact">
     <div class="page-header">
-      <h1>Cesar Salgado's Personal Site</h1>
+      <h1>Contact</h1>
+    </div>  
+
+    <p class="lead">To obtain my email fill in the fields below acoording to the<strong> rule</strong> and then press "Show Email".</p>
+
+    <p><strong>Rule</strong>: firstname -> cesar, 1 -> s , 2 -> v , 3 -> s</p>
+
+    <form id="generate_email_form" class="form-inline">
+      <input type="text" class="input-small" placeholder="firstname">
+      <input type="text" class="input-small" placeholder="1">
+      <input type="text" class="input-small" placeholder="2">
+      <input type="text" class="input-small" placeholder="3">
+      <button id="generate_email" type="submit" class="btn" >Show Email</button>
+    </form>
+
+    <div class="lead">
+      <span id="generated_succesful_email" class="label label-success"></span>
+      <span id="generated_wrong_email" class="label label-important"></span>
     </div>
-
-    <div class="row-fluid">
-  <div class="span4">
-    <img id="my_pic" src="/img/com_cesarsalgado_bariloche.jpg" />
-  </div>
-  <div class="span8">
-    <br>
-    <br>
-    <br>
-  	<div class="lead">
-	    <p>Hi! My name is Cesar Salgado Vieira de Souza. I'm currently enrolled in a master's program and doing research in Machine Learning and Computer Vision in Universidade Federal do Rio Grande do Sul.</p>
-
-  	</div>
-  </div>
-</div>
-
-
   </section>
 
-
-  <section>
-    <div class="page-header">
-      <h2>News</h2>
-    </div>
-    <p class="lead">No news yet.</p>
-  </section>
-  
 </div>
 
 

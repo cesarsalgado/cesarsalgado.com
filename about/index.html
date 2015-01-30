@@ -61,7 +61,7 @@
             <ul class="nav">
 
               <!-- Home -->
-              <li class="active" >
+              <li class="" >
                 <a href="/">Home</a>
               </li>
 
@@ -82,7 +82,7 @@
 
               <!-- About -->
               <!--
-              <li class="" >
+              <li class="active" >
                 <a href="/about">Bio</a>
               </li>
               -->
@@ -109,12 +109,12 @@
             <ul class="nav">
               <!-- English -->
               <li class="active" >
-                <a href="/">english</a>
+                <a href="/about/">english</a>
               </li>
 
               <!-- Portuguese -->
               <li class="" >
-                <a href="/pt/">português</a>
+                <a href="/pt/about/">português</a>
               </li>
             </ul>
           </div>
@@ -125,14 +125,28 @@
 </div>
 
 
-<div id="no-sidenav-container" class="container">
+<div class="container">
 
-  <section>
-    <div class="page-header">
-      <h1>Cesar Salgado's Personal Site</h1>
-    </div>
+  <!-- sites nav
+  ================================================== -->
+  <div class="row">
 
-    <div class="row-fluid">
+    <div class="span3 bs-docs-sidebar">
+  <ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="0">
+        <li><a href=#about> <i class="icon-chevron-right"></i> About </a></li>
+        <li><a href=#bio> <i class="icon-chevron-right"></i> Bio </a></li>
+        <li><a href=#hobbies> <i class="icon-chevron-right"></i> Hobbies </a></li>
+  </ul>
+</div>
+
+
+    <div class="span9">
+
+      <section id="about">
+        <div class="page-header">
+          <h1>About</h1>
+        </div>  
+        <div class="row-fluid">
   <div class="span4">
     <img id="my_pic" src="/img/com_cesarsalgado_bariloche.jpg" />
   </div>
@@ -147,17 +161,25 @@
   </div>
 </div>
 
+      </section>
 
-  </section>
+      <section id="bio">
+        <div class="page-header">
+          <h1>Bio</h1>
+        </div>  
+        <p class="lead">I lived most of my life in a Brazilian city called Pindamonhangaba. I also lived one year in Herning, Denmark as a Rotary exchange student and in Sao Carlos, Brazil while pursuing my Bachelor's degree.</p>
+      </section>
 
+      <section id="hobbies">
+        <div class="page-header">
+          <h1>Hobbies</h1>
+        </div>  
+        <p class="lead">Swimming and Playing Guitar.</p>
+      </section>
 
-  <section>
-    <div class="page-header">
-      <h2>News</h2>
     </div>
-    <p class="lead">No news yet.</p>
-  </section>
   
+  </div>
 </div>
 
 

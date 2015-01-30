@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://davidanguita.name/sitemap.xml

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="utf-8">
     <title>cesarsalgado.com</title>
@@ -55,50 +55,50 @@
           </button>
 
           <!-- Button to homepage -->
-          <a class="brand" href="/">cesarsalgado.com</a>
+          <a class="brand" href="/pt/">cesarsalgado.com</a>
 
           <div class="nav-collapse collapse">
             <ul class="nav">
 
               <!-- Home -->
-              <li class="active" >
-                <a href="/">Home</a>
+              <li class="" >
+                <a href="/pt/">Principal</a>
               </li>
 
               <!-- Blog -->
               <li class="" >
-                <a href="/blog">Blog</a>
+                <a href="/pt/blog">Blog</a>
               </li>
 
               <!-- Curriculum -->
               <li class="" >
-                <a href="/curriculum">Curriculum</a>
+                <a href="/pt/curriculum">Curriculum</a>
               </li>
 
               <!-- Academic -->
-              <li class="" >
-                <a href="/academic">Academic</a>
+              <li class="active" >
+                <a href="/pt/academic">Acadêmico</a>
               </li>
 
               <!-- About -->
               <!--
               <li class="" >
-                <a href="/about">Bio</a>
+                <a href="/pt/about">Bio</a>
               </li>
               -->
 
               <!-- Contact -->
               <li class="" >
-                <a href="/contact">Contact</a>
+                <a href="/pt/contact">Contato</a>
               </li>
 
               <!-- Apps -->
     <!--                         <li class="" >
-                <a href="/apps">Apps</a>
+                <a href="/pt/apps">Apps</a>
               </li>
      -->
     <!--                         <li class="" >
-                <a href="/more">More</a>
+                <a href="/pt/more">Mais</a>
               </li>
      -->        
             </ul>
@@ -108,13 +108,13 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <!-- English -->
-              <li class="active" >
-                <a href="/">english</a>
+              <li class="" >
+                <a href="/academic/">english</a>
               </li>
 
               <!-- Portuguese -->
-              <li class="" >
-                <a href="/pt/">português</a>
+              <li class="active" >
+                <a href="/pt/academic/">português</a>
               </li>
             </ul>
           </div>
@@ -125,39 +125,116 @@
 </div>
 
 
-<div id="no-sidenav-container" class="container">
+<div class="container">
 
-  <section>
-    <div class="page-header">
-      <h1>Cesar Salgado's Personal Site</h1>
-    </div>
+  <!-- sites nav
+  ================================================== -->
+  <div class="row">
 
-    <div class="row-fluid">
-  <div class="span4">
-    <img id="my_pic" src="/img/com_cesarsalgado_bariloche.jpg" />
-  </div>
-  <div class="span8">
-    <br>
-    <br>
-    <br>
-  	<div class="lead">
-	    <p>Hi! My name is Cesar Salgado Vieira de Souza. I'm currently enrolled in a master's program and doing research in Machine Learning and Computer Vision in Universidade Federal do Rio Grande do Sul.</p>
-
-  	</div>
-  </div>
+    <div class="span3 bs-docs-sidebar">
+  <ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="0">
+        <li><a href=#interests> <i class="icon-chevron-right"></i> Interesses </a></li>
+        <li><a href=#education> <i class="icon-chevron-right"></i> Educação </a></li>
+        <li><a href=#research_experience> <i class="icon-chevron-right"></i> Pesquisa </a></li>
+        <li><a href=#online_courses> <i class="icon-chevron-right"></i> Cursos Online </a></li>
+  </ul>
 </div>
 
 
-  </section>
+    <div class="span9">
+      <section id="interests">
+        <div class="page-header">
+          <h1>Interesses</h1>
+        </div>  
+        <p class="lead">I'm currently interested in Deep Learning, mainly ConvNets and RecurrentNets. I'm also interested in the combination of Deep Learning and Reinforcement Learning.</p>
+        <p class="lead">Some papers I think are interesting and I would like to investigate further in their direction:</p>
+        <ul>
+          <li><a href="http://arxiv.org/abs/1410.5401">Neural Turing Machines</a></li>
+          <li><a href="http://arxiv.org/abs/1410.4615">Learning to Execute</a></li>
+          <li><a href="http://arxiv.org/abs/1312.5602">Playing Atari with Deep Reinforcement Learning</a></li>
+        </ul>
+      </section>
 
+      <section id="education">
+        <div class="page-header">
+          <h1>Educação</h1>
+        </div>
+        <p class="lead">Universidade Federal do Rio Grande do Sul</p>
+<ul>
+  <li>Mestrado em Aprendizado de Máquina e Visão Computacional (2014 - presente)</li>
+</ul>
+<p class="lead">Universidade de Sao Paulo</p>
+<ul>
+  <li>Graduação em Engenharia de Computação (2007 - 2012)</li>
+</ul>
 
-  <section>
-    <div class="page-header">
-      <h2>News</h2>
+      </section>
+
+      <section id="research_experience">
+        <div class="page-header">
+          <h1>Pesquisa</h1>
+        </div>
+        <p class="lead">Graduation Project</p>
+        <ul>
+          <li>Developed an interactive software in Java to balance assembly lines.</li>
+        </ul>
+        <p class="lead">Undergraduate Research Scholarship</p>
+        <ul>
+          <li>Developed a distributed evolutionary clustering algorithm based on k-means.</li>
+          <li>It was programmed in C and it used MPI for communication between the nodes.</li>
+        </ul> 
+      </section>
+
+      <section id="online_courses">
+        <div class="page-header">
+          <h1>Cursos Online</h1>
+        </div>
+        <p class="lead">Online Courses I've taken.</p>
+        <ul>
+          <li>Computer Science<ul>
+            <li>Artificial Intelligence<ul>
+              <li>CS188.1x: Artificial Intelligence - Berkeley - edX</li>
+              <li>Machine Learning - Stanford - Coursera</li>
+            </ul></li>
+            <li>Others<ul>
+              <li>Algorithms: Design and Analysis, Part 1 - Stanford - Coursera</li>
+              <li>Algorithms: Design and Analysis, Part 2 - Stanford - Coursera</li>        
+              <li>Functional Programming Principles in Scala - EPFL - Coursera</li>
+              <li>CS169.1x: Software as a Service - Berkeley - edX</li>
+              <li>CS169.2x: Software as a Service - Berkeley - edX</li>
+              <li>Cryptography I - Stanford - Coursera</li>
+              <li>Introduction to Computer Science - Udacity (Although the concepts of computer science were pretty easy for me, this class was still helpful to learn the basics of python and search engines)</li>
+            </ul></li>
+          </ul></li>
+          <li>Neuroscience<ul>
+            <li>Computational Neuroscience - University of Washington - Coursera</li>
+            <li>Synapses, Neurons and Brains - University of Jerusalem - Coursera</li>
+          </ul></li>
+          <li>Physics<ul>
+            <li>C10: Physics for future Presidents, with Richard A. Muller - webcast.berkeley</li>
+            <li>8.02: Electricity and Magnetism - MIT OpenCourseWare</li>
+          </ul></li>
+          <li>Mathematics<ul>
+            <li>18.06: Linear Algebra - MIT OpenCourseWare</li>
+          </ul></li>
+          <li>Social Sciences and Humanities<ul>
+            <li><a href="http://www.justiceharvard.org">Justice - Harvard</a></li>
+            <li>Introduction To Psychology, with Paul Bloom - Open Yale Courses</li>
+          </ul></li>
+        </ul>
+        
+        <!--
+        <p class="lead">Courses that I am currently taking.</p>
+        <ul>
+        </ul> 
+        -->
+
+        <p class="lead">To list only the online courses for which I have certification of completion, please, follow this <a href="curriculum#online-courses">link</a>.</p>
+      </section>
+
     </div>
-    <p class="lead">No news yet.</p>
-  </section>
   
+  </div>
 </div>
 
 
@@ -166,9 +243,9 @@
     ================================================== -->
     <footer class="footer">
       <div class="container">
-        <p>Hosted on <a href='http://pages.github.com'>Github Pages</a> and powered by <a href='http://middlemanapp.com'>Middleman</a>.</p>
-        <p>This site used as a starting point the <a href='http://getbootstrap.com/2.3.2/'>Bootstrap 2.3.2 Docs site</a>.</p>
-        <p>This work is licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>Hospedado em <a href='http://pages.github.com'>Github Pages</a> e criado com <a href='http://middlemanapp.com'>Middleman</a>.</p>
+        <p>Esse site usou como ponto de partida o <a href='http://getbootstrap.com/2.3.2/'>Bootstrap 2.3.2 Docs site</a>.</p>
+        <p>Esse trabalho está licenciado sob <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
         <ul class="footer-links">
           <li><a href='http://www.linkedin.com/pub/cesar-salgado/13/641/505'>Linkedin</a></li>
           <li class="muted">&middot;</li>
