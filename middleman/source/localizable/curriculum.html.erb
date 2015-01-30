@@ -1,0 +1,156 @@
+---
+layout: layout
+sections:
+  - resume
+  - education
+  - work_experience
+  - major_school_projects
+  - other_experiences
+  - technical_skills
+  - certifications
+  - languages
+  - online_courses
+---
+
+<%= partial(:top_navbar, :locals => { :curriculum_active => 'active'}) %>
+
+<div class="container">
+
+  <!-- sites nav
+  ================================================== -->
+  <div class="row">
+
+    <%= partial "side_navbar" %>
+
+    <div class="span9">
+
+      <section id="resume">
+        <div class="page-header">
+          <h1><%= I18n.t("curriculum.side_menu.resume") %></h1>
+        </div>  
+        <p class="lead"><%= I18n.t("curriculum.resume.line_find_pdf_resume") %> <a href="https://dl.dropboxusercontent.com/u/9578179/cesar_salgado_resume_without_email.pdf"><%= I18n.t("common.here") %></a>.</p>
+        <p class="lead"><%= I18n.t("curriculum.resume.curriculum_shown_below") %></p>
+      </section>
+
+      <section id="education">
+        <div class="page-header">
+          <h1><%= I18n.t("curriculum.side_menu.education") %></h1>
+        </div>
+        <%= partial "education_partial" %>
+      </section>
+
+      <section id="work_experience">
+        <div class="page-header">
+          <h1><%= I18n.t("curriculum.side_menu.work_experience") %></h1>
+        </div>
+        <p class="lead"><strong>Pinuts Studios</strong> - <%= I18n.t("curriculum.work_experience.pinuts.title") %> (Jul 2012 – <%= I18n.t("common.oct") %> 2012)</p>
+        <ul>
+          <li><%= I18n.t("curriculum.work_experience.pinuts.spec") %></li>
+        </ul> 
+        <p class="lead"><strong>Neolog Consultoria e Sistemas</strong> - <%= I18n.t("curriculum.work_experience.neolog.title") %> (Jan 2012 - Jun 2012)</p>
+        <ul>
+          <li><%= I18n.t("curriculum.work_experience.neolog.spec.item1") %></li>
+          <li><%= I18n.t("common.learned") %> Spring, Hibernate<%= I18n.t("common.last_item_and") %> Jasper Report.</li>
+          <li><%= I18n.t("common.learned") %> Scrum.</li>
+        </ul> 
+      </section>
+
+      <section id="major_school_projects">
+        <div class="page-header">
+          <h1><%= I18n.t("curriculum.side_menu.major_school_projects") %></h1>
+        </div>
+        <p class="lead"><%= I18n.t("curriculum.major_school_projects.graduation.title") %></p>
+        <ul>
+          <li><%= I18n.t("curriculum.major_school_projects.graduation.spec") %></li>
+        </ul>
+        <p class="lead"><%= I18n.t("curriculum.major_school_projects.undergrad_research.title") %></p>
+        <ul>
+          <li><%= I18n.t("curriculum.major_school_projects.undergrad_research.spec") %></li>
+        </ul> 
+      </section>
+
+      <section id="other_experiences">
+        <div class="page-header">
+          <h1><%= I18n.t("curriculum.side_menu.other_experiences") %></h1>
+        </div>
+        <p class="lead"><%= I18n.t("curriculum.other_experiences.volunteer_work.title") %></p>
+        <ul>
+          <li><%= I18n.t("curriculum.other_experiences.volunteer_work.spec") %></li>
+        </ul>
+        <p class="lead"><%= I18n.t("curriculum.other_experiences.tutoring_calculus.title") %></p>
+        <ul>
+          <li><%= I18n.t("curriculum.other_experiences.tutoring_calculus.spec") %></li>
+        </ul> 
+        <p class="lead"><%= I18n.t("curriculum.other_experiences.eescjr.title") %></p>
+        <ul>
+          <li><%= I18n.t("curriculum.other_experiences.eescjr.spec") %></li>
+        </ul> 
+        <p class="lead"><%= I18n.t("curriculum.other_experiences.rotary.title") %></p>
+        <ul>
+          <li><%= I18n.t("curriculum.other_experiences.rotary.spec") %></li>
+        </ul> 
+      </section>
+
+      <section id="technical_skills">
+        <div class="page-header">
+          <h1><%= I18n.t("curriculum.side_menu.technical_skills") %></h1>
+        </div>
+        <ul>
+          <li><%= I18n.t("common.advanced") %>: <b>Java</b> <%= I18n.t("common.and") %> <b>Python</b>.</li>
+          <li><%= I18n.t("common.intermediate") %>: <b>C</b>, <b>SQL</b>, <b>Matlab</b><%= I18n.t("common.last_item_and") %> <b>LaTeX</b>.</li>
+          <li><%= I18n.t("common.beginner") %>: <b>C++</b>, <b>Ruby</b>, <b>JavaScript</b>, <b>R</b>, <b>Scala</b>, <b>HTML</b><%= I18n.t("common.last_item_and") %> <b>CSS</b>.</li>
+          <li><%= I18n.t("common.plataform") %>s: <b>Android</b>, <b>Linux</b><%= I18n.t("common.last_item_and") %> <b>Windows</b>.</li>
+          <li><%= I18n.t("curriculum.technical_skills.experience_following") %> Frameworks <%= I18n.t("common.and") %> APIs: <b>Numpy</b>, <b>Scipy</b>, <b>Scikit-Learn</b>, <b>Caffe</b>, <b>MPI</b>, <b>OpenGL</b><%= I18n.t("common.last_item_and") %> <b>Rails</b>.</li>
+          <li><%= I18n.t("curriculum.technical_skills.experience_following") %> Softwares and Tools: <b>Git</b>, <b>Vim</b>, <b>Eclipse</b>, <b>Inkscape</b><%= I18n.t("common.last_item_and") %> <b>Microsoft Office</b>.</li>
+        </ul>
+      </section>
+
+      <section id="certifications">
+        <div class="page-header">
+          <h1><%= I18n.t("curriculum.side_menu.certifications") %></h1>
+        </div>
+        <ul>
+          <li>Oracle Certified Professional, Java SE 6 Programmer.</li>
+        </ul>
+      </section>
+
+      <section id="languages">
+        <div class="page-header">
+          <h1><%= I18n.t("curriculum.side_menu.languages") %></h1>
+        </div>
+        <ul>
+          <li><%= I18n.t("common.portuguese") %>: <strong><%= I18n.t("common.native") %></strong></li>
+          <li><%= I18n.t("common.english") %>: <strong><%= I18n.t("common.advanced") %></strong></li>
+          <li><%= I18n.t("common.danish") %>: <strong><%= I18n.t("common.beginner") %></strong></li>
+        </ul>
+      </section>
+
+      <section id="online_courses">
+        <div class="page-header">
+          <h1><%= I18n.t("curriculum.side_menu.online_courses") %></h1>
+        </div>
+        <p class="lead"><%= I18n.t("curriculum.online_courses.introduction") %></p>
+        <ul>
+          <li>CS188.1x: Artificial Intelligence - Berkeley - edX</li>
+          <li>Machine Learning - Stanford - Coursera</li>
+          <li>CS1156x Learning From Data (introductory Machine Learning course) - Caltech - Edx</li>
+          <li>Computing for Data Analysis - Johns Hopkins University - Coursera</li>
+          <li>Algorithms: Design and Analysis, Part 1 - Stanford - Coursera</li>
+          <li>Algorithms: Design and Analysis, Part 2 - Stanford - Coursera</li>        
+          <li>Functional Programming Principles in Scala - EPFL - Coursera</li>
+          <li>CS169.1x: Software as a Service - Berkeley - edX</li>
+          <li>CS169.2x: Software as a Service - Berkeley - edX</li>
+          <li>Cryptography I - Stanford - Coursera</li>
+          <li>Computational Neuroscience - University of Washington - Coursera</li>
+          <li>CS-191x: Quantum Mechanics and Quantum Computation - Berkeley - Edx</li>
+        </ul>
+        <p class="lead"><%= I18n.t("curriculum.online_courses.more_info") %> <a href="http://www.coursera.org/">coursera.org</a> <%= I18n.t("common.and") %> <a href="http://www.edx.org/">edx.org</a>.</p>
+
+        <p class="lead"><%= I18n.t("curriculum.online_courses.list_all") %> <a href="academic.html#online-courses">link</a>.</p>
+
+      </section>
+
+    </div>
+  
+  </div>
+</div>

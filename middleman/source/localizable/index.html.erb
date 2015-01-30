@@ -1,0 +1,26 @@
+---
+layout: layout
+---
+
+<%= partial(:top_navbar, :locals => { :home_active => "active"}) %>
+
+<div id="no-sidenav-container" class="container">
+
+  <section>
+    <div class="page-header">
+      <h1><%= I18n.t('home.home_header') %></h1>
+    </div>
+
+    <%= partial "about_partial" %>
+
+  </section>
+
+
+  <section>
+    <div class="page-header">
+      <h2><%= I18n.t('home.news') %></h2>
+    </div>
+    <p class="lead"><%= I18n.t('home.no_news_yet') %></p>
+  </section>
+  
+</div>

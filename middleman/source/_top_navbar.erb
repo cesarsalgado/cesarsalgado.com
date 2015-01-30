@@ -1,0 +1,117 @@
+<!-- Navbar
+================================================== -->
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span10">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- Button to homepage -->
+          <a class="brand" href="<%= locale_base_path %>/">cesarsalgado.com</a>
+
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+
+              <!-- Home -->
+              <% if !defined?(:home_active) %>
+                <% home_active = "" %>
+              <% end %>
+              <li class="<%= home_active %>" >
+                <a href="<%= locale_base_path %>/"><%= I18n.t('topmenu.home') %></a>
+              </li>
+
+              <!-- Blog -->
+              <% if !defined?(:blog_active) %>
+                <% blog_active = "" %>
+              <% end %>
+              <li class="<%= blog_active %>" >
+                <a href="<%= locale_base_path %>/blog"><%= I18n.t('topmenu.blog') %></a>
+              </li>
+
+              <!-- Curriculum -->
+              <% if !defined?(:curriculum_active) %>
+                <% curriculum_active = "" %>
+              <% end %>
+              <li class="<%= curriculum_active %>" >
+                <a href="<%= locale_base_path %>/curriculum"><%= I18n.t('topmenu.curriculum') %></a>
+              </li>
+
+              <!-- Academic -->
+              <% if !defined?(:academic_active) %>
+                <% academic_active = "" %>
+              <% end %>
+              <li class="<%= academic_active %>" >
+                <a href="<%= locale_base_path %>/academic"><%= I18n.t('topmenu.academic') %></a>
+              </li>
+
+              <!-- About -->
+              <!--
+              <% if !defined?(:bio_active) %>
+                <% about_active = "" %>
+              <% end %>
+              <li class="<%= about_active %>" >
+                <a href="<%= locale_base_path %>/about"><%= I18n.t('topmenu.bio') %></a>
+              </li>
+              -->
+
+              <!-- Contact -->
+              <% if !defined?(:contact_active) %>
+                <% contact_active = "" %>
+              <% end %>
+              <li class="<%= contact_active %>" >
+                <a href="<%= locale_base_path %>/contact"><%= I18n.t('topmenu.contact') %></a>
+              </li>
+
+              <!-- Apps -->
+    <!--           <% if !defined?(:apps_active) %>
+                <% apps_active = "" %>
+              <% end %>
+              <li class="<%= apps_active %>" >
+                <a href="<%= locale_base_path %>/apps"><%= I18n.t('topmenu.apps') %></a>
+              </li>
+     -->
+    <!--           <% if !defined?(:more_active) %>
+                <% more_active = "" %>
+              <% end %>
+              <li class="<%= more_active %>" >
+                <a href="<%= locale_base_path %>/more"><%= I18n.t('topmenu.more') %></a>
+              </li>
+     -->        
+            </ul>
+          </div>
+        </div>
+        <div class="span2">
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <!-- English -->
+              <% if I18n.locale.to_s == 'en' %>
+                <% en_active = "active" %>
+              <% else %>
+                <% en_active = "" %>
+              <% end %>
+              <li class="<%= en_active %>" >
+                <a href="<%= get_url_in_default_lang(current_page.url, I18n.locale) %>">english</a>
+              </li>
+
+              <!-- Portuguese -->
+              <% if I18n.locale.to_s == 'pt' %>
+                <% pt_active = "active" %>
+              <% else %>
+                <% pt_active = "" %>
+              <% end %>
+              <li class="<%= pt_active %>" >
+                <a href="/pt<%= get_url_in_default_lang(current_page.url, I18n.locale) %>">português</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

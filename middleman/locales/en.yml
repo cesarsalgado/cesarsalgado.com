@@ -1,0 +1,114 @@
+---
+en:
+  topmenu:
+    home: Home
+    blog: Blog
+    curriculum: Curriculum
+    academic: Academic
+    bio: Bio
+    contact: Contact
+    apps: Apps
+    more: More
+  
+  footer:
+    hosted_on: Hosted on
+    and_powered_by: and powered by
+    starting_point: This site used as a starting point the
+    licensed_under: This work is licensed under
+
+  home:
+    home_header: Cesar Salgado's Personal Site
+    news: News
+    no_news_yet: No news yet.
+
+  curriculum:
+    side_menu:
+      resume: Resume
+      education: Education
+      work_experience: Work Experience
+      major_school_projects: Major School Projects
+      other_experiences: Other Experiences
+      technical_skills: Technical Skills
+      certifications: Certifications
+      languages: Languages
+      online_courses: Online Courses
+    resume:
+      line_find_pdf_resume: You can find my resume in PDF format
+      curriculum_shown_below: My curriculum is shown below.
+    education:
+      usp: University of Sao Paulo 
+      usp_spec: Bachelor's Degree, Computer Engineering (2007 - 2012)
+      ufrgs_spec: Master's Degree, Machine Learning and Computer Vision (2014 - present)
+    work_experience:
+      pinuts:
+        title: Android Developer
+        spec: Developed a game for android. It was developed by a team of 2 engineers.
+      neolog: 
+        title: Java Developer Intern
+        spec:
+          item1: Maintained and improved a supply chain optimization software.
+    major_school_projects:
+      graduation:
+        title: Graduation Project
+        spec: Developed an interactive software in Java to balance assembly lines.
+      undergrad_research:
+        title: Undergraduate Research Scholarship
+        spec: Developed a distributed evolutionary clustering algorithm based on k-means. It was programmed in C and it used MPI for communication between the nodes.
+    other_experiences:
+      volunteer_work:
+        title: Associacao Formiga Verde - Volunteer Work
+        spec: Classes in physics and math were given to disadvantaged Brazilians.
+      tutoring_calculus:
+        title: University of Sao Paulo - Tutoring of Calculus
+        spec: Tutoring of Calculus to undergraduate students.
+      eescjr:
+        title: EESC jr. – Marketing Manager in the Junior-Enterprise of the School of Engineering
+        spec: Events and company’s recruitment process on campus were organized.
+      rotary:
+        title: Rotary International student exchange program
+        spec: Spent a year living with three host families and attending High School in Denmark.
+    technical_skills:
+      experience_following: Experience with the following
+      ml_experience: Experience in implementing Machine Learning algorithms.
+    online_courses:
+      introduction: Below I show the online courses for which I obtained certification of completion.
+      more_info: More information about the courses above can be found at
+      list_all: To list all online courses that I've already taken, including those without certification, please follow this
+
+  academic:
+    side_menu:
+      interests: Interests
+      education: Education
+      research_experience: Research Experience
+      online_courses: Online Courses
+
+  about:
+    side_menu:
+      about: About 
+      bio: Bio
+      hobbies: Hobbies
+
+  contact:
+    contact: Contact
+    intro1: To obtain my email fill in the fields below acoording to the
+    rule: rule
+    intro2: "and then press \"Show Email\""
+    show_email: Show Email
+     
+  common:
+    here: here
+    earn_certificate: earned certificate
+    oct: Oct
+    learned: Learned
+    last_item_and: ", and"
+    and: and
+    advanced: Advanced
+    intermediate: Intermediate
+    beginner: Beginner
+    plataform: Plataform
+    developer: developer
+    user: user
+    english: English
+    portuguese: Portuguese
+    danish: Danish
+    native: Native

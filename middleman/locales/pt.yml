@@ -1,0 +1,114 @@
+---
+pt:
+  topmenu:
+    home: Principal 
+    blog: Blog
+    curriculum: Curriculum
+    academic: Acadêmico
+    bio: Bio
+    contact: Contato
+    apps: Apps
+    more: Mais
+  
+  footer:
+    hosted_on: Hospedado em
+    and_powered_by: e criado com
+    starting_point: Esse site usou como ponto de partida o
+    licensed_under: Esse trabalho está licenciado sob 
+
+  home:
+    home_header: Página Pessoal do César Salgado 
+    news: Novidades
+    no_news_yet: Ainda sem novidades.
+
+  curriculum:
+    side_menu:
+      resume: Currículo Resumido
+      education: Formação
+      work_experience: Experiêcia Profissional
+      major_school_projects: Principais Projetos Durante a Graduação
+      other_experiences: Outras Experiências
+      technical_skills: Qualificações
+      certifications: Certificações
+      languages: Línguas
+      online_courses: Cursos Online
+    resume:
+      line_find_pdf_resume: Meu currículo resumido no formato PDF pode ser acessado
+      curriculum_shown_below: Sua versão expandida é mostrada abaixo.
+    education:
+      usp: Universidade de São Paulo
+      usp_spec: Graduação em Engenharia de Computação (2007 - 2012)
+      ufrgs_spec: Mestrado em Aprendizado de Máquina e Visão Computacional (2014 - presente)
+    work_experience:
+      pinuts:
+        title: Desenvolvedor Android
+        spec: Desenvolveu, juntamente com mais um engenheiro, um jogo para Android.
+      neolog: 
+        title: Estagiário Desenvolvedor Java
+        spec: 
+          item1: Correções de falhas e desenvolvimento de novas funcionalidades para o principal software da empresa.
+    major_school_projects:
+      graduation:
+        title: Trabalho de Conclusão de Curso
+        spec: Desenvolvi uma ferramenta interativa para o balanceamento de linhas de produção.
+      undergrad_research:
+        title: Iniciação Científica
+        spec: Desenvolvimento de um algoritmo de agrupamento distribuído em C no qual foi utilizado MPI para a comunicação entre os nós de dados.
+    other_experiences:
+      volunteer_work:
+        title: Associação Formiga Verde - Trabalho Voluntário
+        spec: Aulas de Física e Matemática para alunos da comunidade Santa Felícia.
+      tutoring_calculus:
+        title: Universidade de São Paulo - Monitor bolsista de Cálculo I
+        spec: Monitor de Cálculo I durante o terceiro semestre da graduação.
+      eescjr:
+        title: EESC jr. – Gerente de Marketing da Empresa Júnior
+        spec: "Tarefas: Organização de eventos, processos seletivos e busca de patrocínios."
+      rotary:
+        title: Programa de intercâmbio do Rotary
+        spec: Intercâmbio de um ano na Dinamarca por meio do Rotary International.
+    technical_skills:
+      experience_following: Experiência com os seguintes
+      ml_experience: Experência com implementação de algoritmos de Aprendizado de Máquina.
+    online_courses:
+      introduction: Abaixo são mostrados os cursos online dos quais eu já completei e obtive certificação.
+      more_info: Mais informações sobre os cursos podem ser encontradas em 
+      list_all: Para listar todos os cursos online que eu já fiz, incluindo aqueles sem certificações, clique neste
+
+  academic:
+    side_menu:
+      interests: Interesses
+      education: Educação
+      research_experience: Pesquisa
+      online_courses: Cursos Online
+
+  about:
+    side_menu:
+      about: Sobre
+      bio: Bio
+      hobbies: Hobbies
+
+  contact:
+    contact: Contato
+    intro1: Para obter meu e-mail preencha os campos abaixo de acordo com a
+    rule: regra
+    intro2: "e depois aperte \"Mostrar Email\""
+    show_email: Mostrar Email
+
+  common:
+    here: aqui
+    earn_certificate: ganhei certificado
+    oct: Out
+    learned: Aprendi
+    last_item_and: " e"
+    and: e
+    advanced: Avançado
+    intermediate: Intermediário
+    beginner: Iniciante
+    plataform: Plataforma
+    developer: desenvolvedor
+    user: usuário
+    english: Inglês
+    portuguese: Português
+    danish: Dinamarquês
+    native: Nativo
