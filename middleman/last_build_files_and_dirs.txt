@@ -7,7 +7,6 @@ contact
 content
 css
 curriculum
-first_test_post
 ico
 img
 index2
@@ -15,4 +14,3 @@ index.html
 js
 more
 pt
-second_test_post
