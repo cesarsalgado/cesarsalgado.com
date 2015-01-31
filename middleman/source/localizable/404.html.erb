@@ -2,8 +2,21 @@
 layout: layout
 ---
 
-<div id="content404">
-  <p>Sorry, I couldn't find that page for you! :(</p>
+<%= partial(:top_navbar) %>
 
-  <p>You should try <a href="/">checking out the homepage</a>.</p>
+<div id="no-sidenav-container" class="container">
+  <section>
+    <div class="page-header">
+      <h1>404</h1>
+    </div>
+    <p class="lead">Sorry, I couldn't find that page for you! :(</p>
+    <p class="lead">You should try <a href="/">checking out the homepage</a>.</p>
+  </section>
+
+  <section>
+    <div class="page-header">
+    </div>
+    <p class="lead">Desculpa, Não foi possível achar essa página! :(</p>
+    <p class="lead">Tente acessar a <a href="/pt">página principal</a>.</p>
+  </section>
 </div>
