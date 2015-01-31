@@ -1,5 +1,11 @@
 bundle exec middleman build
 
-# Remove all files in directory except the .git... local_resources and build
+for word in $(cat last_build_files_and_dirs.txt); do 
+  rm -r ../$word  
+done
+
+ls build > last_build_files_and_dirs.txt
+
 mv build/* ../
+
 rmdir build

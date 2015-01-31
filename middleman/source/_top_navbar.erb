@@ -19,7 +19,7 @@
             <ul class="nav">
 
               <!-- Home -->
-              <% if !defined?(:home_active) %>
+              <% if !defined?(home_active) %>
                 <% home_active = "" %>
               <% end %>
               <li class="<%= home_active %>" >
@@ -27,15 +27,15 @@
               </li>
 
               <!-- Blog -->
-              <% if !defined?(:blog_active) %>
+              <% if !defined?(blog_active) %>
                 <% blog_active = "" %>
               <% end %>
               <li class="<%= blog_active %>" >
-                <a href="<%= locale_base_path %>/blog"><%= I18n.t('topmenu.blog') %></a>
+                <a href="/blog"><%= I18n.t('topmenu.blog') %></a>
               </li>
 
               <!-- Curriculum -->
-              <% if !defined?(:curriculum_active) %>
+              <% if !defined?(curriculum_active) %>
                 <% curriculum_active = "" %>
               <% end %>
               <li class="<%= curriculum_active %>" >
@@ -43,7 +43,7 @@
               </li>
 
               <!-- Academic -->
-              <% if !defined?(:academic_active) %>
+              <% if !defined?(academic_active) %>
                 <% academic_active = "" %>
               <% end %>
               <li class="<%= academic_active %>" >
@@ -52,7 +52,7 @@
 
               <!-- About -->
               <!--
-              <% if !defined?(:bio_active) %>
+              <% if !defined?(bio_active) %>
                 <% about_active = "" %>
               <% end %>
               <li class="<%= about_active %>" >
@@ -61,7 +61,7 @@
               -->
 
               <!-- Contact -->
-              <% if !defined?(:contact_active) %>
+              <% if !defined?(contact_active) %>
                 <% contact_active = "" %>
               <% end %>
               <li class="<%= contact_active %>" >
@@ -69,14 +69,14 @@
               </li>
 
               <!-- Apps -->
-    <!--           <% if !defined?(:apps_active) %>
+    <!--           <% if !defined?(apps_active) %>
                 <% apps_active = "" %>
               <% end %>
               <li class="<%= apps_active %>" >
                 <a href="<%= locale_base_path %>/apps"><%= I18n.t('topmenu.apps') %></a>
               </li>
      -->
-    <!--           <% if !defined?(:more_active) %>
+    <!--           <% if !defined?(more_active) %>
                 <% more_active = "" %>
               <% end %>
               <li class="<%= more_active %>" >
@@ -95,9 +95,11 @@
               <% else %>
                 <% en_active = "" %>
               <% end %>
+              <% if !defined?(en_hidden) %>
               <li class="<%= en_active %>" >
                 <a href="<%= get_url_in_default_lang(current_page.url, I18n.locale) %>">english</a>
               </li>
+              <% end %>
 
               <!-- Portuguese -->
               <% if I18n.locale.to_s == 'pt' %>
@@ -105,9 +107,11 @@
               <% else %>
                 <% pt_active = "" %>
               <% end %>
-              <li class="<%= pt_active %>" >
-                <a href="/pt<%= get_url_in_default_lang(current_page.url, I18n.locale) %>">português</a>
-              </li>
+              <% if !defined?(pt_hidden) and blog_active.empty? %>
+                <li class="<%= pt_active %>" >
+                  <a href="/pt<%= get_url_in_default_lang(current_page.url, I18n.locale) %>">português</a>
+                </li>
+              <% end %>
             </ul>
           </div>
         </div>

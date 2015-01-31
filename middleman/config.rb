@@ -91,13 +91,21 @@ set :js_dir, 'js'
 
 set :images_dir, 'img'
 
+activate :syntax, :line_numbers => true
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+
 ignore "/about"
 
 activate :blog do |blog|
+  blog.sources = "posts/:year_:month_:day_:title.html"
   blog.permalink = "{title}.html"
+  blog.layout = "post"
 end
 
 activate :directory_indexes
+
+page "/404.html", :directory_index => false
 
 # Build-specific configuration
 configure :build do

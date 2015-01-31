@@ -5,7 +5,11 @@
   Special styles for presenting Bootstrap's documentation and examples
 */
 
+<%= Rouge::Themes::Monokai.render(:scope => '.highlight') %>
 
+div.highlight {
+  margin-bottom: 20px
+}
 
 /* Body and structure
 -------------------------------------------------- */
@@ -63,6 +67,7 @@ body > .navbar .brand:hover {
 section {
   padding-top: 30px;
 }
+section > #post_content > p,
 section > .page-header,
 section > .lead {
   color: #5a5a5a;

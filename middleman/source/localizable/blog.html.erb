@@ -4,6 +4,15 @@ layout: layout
 
 <%= partial("top_navbar", :locals => { :blog_active => 'active'}) %>
 
-<div class="container">
-  <p>Blog.</p>
+<div id="no-sidenav-container" class="container">
+
+  <section>
+    <div class="page-header">
+      <h2>Blog</h2>
+    </div>
+    <% blog.articles.each do |article| %>
+      <p class="lead"><time><%= article.date.strftime("%b %d, %Y") %></time> - <a href="<%= article.url %>"><%= article.title %></a></p>
+    <% end %>
+  </section>
+  
 </div>
