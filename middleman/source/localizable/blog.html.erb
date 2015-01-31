@@ -10,6 +10,9 @@ layout: layout
     <div class="page-header">
       <h2>Blog</h2>
     </div>
+    <% if blog.articles.empty? %>
+      <p class="lead">No posts yet.</p>
+    <% end %>
     <% blog.articles.each do |article| %>
       <p class="lead"><time><%= article.date.strftime("%b %d, %Y") %></time> - <a href="<%= article.url %>"><%= article.title %></a></p>
     <% end %>
