@@ -24,14 +24,6 @@ sections:
 
     <div class="span9">
 
-      <section id="resume">
-        <div class="page-header">
-          <h1><%= I18n.t("curriculum.side_menu.resume") %></h1>
-        </div>  
-        <p class="lead"><%= I18n.t("curriculum.resume.line_find_pdf_resume") %> <a href="https://dl.dropboxusercontent.com/u/9578179/cesar_salgado_resume_without_email.pdf"><%= I18n.t("common.here") %></a>.</p>
-        <p class="lead"><%= I18n.t("curriculum.resume.curriculum_shown_below") %></p>
-      </section>
-
       <section id="education">
         <div class="page-header">
           <h1><%= I18n.t("curriculum.side_menu.education") %></h1>
@@ -146,7 +138,7 @@ sections:
         </ul>
         <p class="lead"><%= I18n.t("curriculum.online_courses.more_info") %> <a href="http://www.coursera.org/">coursera.org</a> <%= I18n.t("common.and") %> <a href="http://www.edx.org/">edx.org</a>.</p>
 
-        <p class="lead"><%= I18n.t("curriculum.online_courses.list_all") %> <a href="academic.html#online-courses">link</a>.</p>
+        <p class="lead"><%= I18n.t("curriculum.online_courses.list_all") %> <a href="<%= locale_base_path %>/academic#online_courses">link</a>.</p>
 
       </section>
 
