@@ -14,7 +14,9 @@ layout: layout
       <p class="lead">No posts yet.</p>
     <% end %>
     <% blog.articles.each do |article| %>
-      <p class="lead"><time><%= article.date.strftime("%b %d, %Y") %></time> - <a href="<%= article.url %>"><%= article.title %></a></p>
+      <% if article.lang.to_s == I18n.locale.to_s %>
+        <p class="lead"><time><%= article.date.strftime("%b %d, %Y") %></time> - <a href="<%= article.url %>"><%= article.title %></a></p>
+      <% end %>
     <% end %>
   </section>
   

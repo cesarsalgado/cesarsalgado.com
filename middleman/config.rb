@@ -98,7 +98,7 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true
 ignore "/about"
 
 activate :blog do |blog|
-  blog.sources = "posts/:year_:month_:day_:title.html"
+  blog.sources = "posts/:year-:month-:day-:title-:lang.html"
   blog.permalink = "{title}.html"
   blog.layout = "post"
 end

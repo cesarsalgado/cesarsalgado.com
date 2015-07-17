@@ -31,7 +31,7 @@
                 <% blog_active = "" %>
               <% end %>
               <li class="<%= blog_active %>" >
-                <a href="/blog"><%= I18n.t('topmenu.blog') %></a>
+                <a href="<%= locale_base_path %>/blog"><%= I18n.t('topmenu.blog') %></a>
               </li>
 
               <!-- Curriculum -->
@@ -107,7 +107,7 @@
               <% else %>
                 <% pt_active = "" %>
               <% end %>
-              <% if !defined?(pt_hidden) and blog_active.empty? %>
+              <% if !defined?(pt_hidden) %>
                 <li class="<%= pt_active %>" >
                   <a href="/pt<%= get_url_in_default_lang(current_page.url, I18n.locale) %>">português</a>
                 </li>
