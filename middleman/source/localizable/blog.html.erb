@@ -11,7 +11,7 @@ layout: layout
       <h2>Blog</h2>
     </div>
     <% if blog.articles.empty? %>
-      <p class="lead">No posts yet.</p>
+      <p class="lead"><%= I18n.t("blog.no_posts_yet") %></p>
     <% end %>
     <% blog.articles.each do |article| %>
       <% if article.lang.to_s == I18n.locale.to_s %>

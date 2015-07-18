@@ -23,6 +23,7 @@ pt:
 
   blog:
     back_blog_main: Voltar para lista de posts
+    no_posts_yet: Nenhum post ainda
 
   curriculum:
     side_menu:

@@ -23,6 +23,7 @@ en:
 
   blog:
     back_blog_main: Go back to list of posts
+    no_posts_yet: No posts yet
 
   curriculum:
     side_menu:
