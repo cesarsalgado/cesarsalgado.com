@@ -71,6 +71,7 @@
                 <a href="<%= locale_base_path %>/contact"><%= I18n.t('topmenu.contact') %></a>
               </li>
 
+
               <!-- Apps -->
     <!--           <% if !defined?(apps_active) %>
                 <% apps_active = "" %>
@@ -102,20 +103,16 @@
               <% else %>
                 <% pt_active = "" %>
               <% end %>
-              <% lang_hidden = false %>
-              <% if post_active == "active" %>
-                <% lang_hidden = true %>
-              <% end %>
 
               <!-- English -->
-              <% if !lang_hidden %>
+              <% if !defined?(lang_hidden) %>
               <li class="<%= en_active %>" >
                 <a href="<%= get_url_in_default_lang(current_page.url, I18n.locale) %>">english</a>
               </li>
               <% end %>
 
               <!-- Portuguese -->
-              <% if !lang_hidden %>
+              <% if !defined?(lang_hidden) %>
                 <li class="<%= pt_active %>" >
                   <a href="/pt<%= get_url_in_default_lang(current_page.url, I18n.locale) %>">português</a>
                 </li>

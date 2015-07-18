@@ -2,7 +2,7 @@
 layout: layout
 ---
 
-<%= partial(:top_navbar) %>
+<%= partial(:top_navbar, :locals => { :page_not_found_active => 'active', :lang_hidden => true }) %>
 
 <div id="no-sidenav-container" class="container">
   <section>
