@@ -93,7 +93,7 @@ en:
 
   contact:
     contact: Contact
-    intro1: To obtain my email fill in the fields below acoording to the
+    intro1: To obtain my email fill in the fields below according to the
     rule: rule
     intro2: "and then press \"Show Email\""
     show_email: Show Email
@@ -108,7 +108,7 @@ en:
     advanced: Advanced
     intermediate: Intermediate
     beginner: Beginner
-    plataform: Plataform
+    platform: Platform
     developer: developer
     user: user
     english: English

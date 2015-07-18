@@ -28,7 +28,7 @@ pt:
     side_menu:
       resume: Currículo Resumido
       education: Formação
-      work_experience: Experiêcia Profissional
+      work_experience: Experiência Profissional
       major_school_projects: Principais Projetos Durante a Graduação
       other_experiences: Outras Experiências
       technical_skills: Qualificações
@@ -72,7 +72,7 @@ pt:
         spec: Intercâmbio de um ano na Dinamarca por meio do Rotary International.
     technical_skills:
       experience_following: Experiência com os seguintes
-      ml_experience: Experência com implementação de algoritmos de Aprendizado de Máquina.
+      ml_experience: Experiência com implementação de algoritmos de Aprendizado de Máquina.
     online_courses:
       introduction: Abaixo são mostrados os cursos online dos quais eu já completei e obtive certificação.
       more_info: Mais informações sobre os cursos podem ser encontradas em 
@@ -95,8 +95,8 @@ pt:
     contact: Contato
     intro1: Para obter meu e-mail preencha os campos abaixo de acordo com a
     rule: regra
-    intro2: "e depois aperte \"Mostrar Email\""
-    show_email: Mostrar Email
+    intro2: "e depois aperte \"Mostrar E-mail\""
+    show_email: Mostrar E-mail
 
   common:
     here: aqui
