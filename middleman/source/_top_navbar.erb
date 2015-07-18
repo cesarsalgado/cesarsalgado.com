@@ -30,7 +30,10 @@
               <% if !defined?(blog_active) %>
                 <% blog_active = "" %>
               <% end %>
-              <li class="<%= blog_active %>" >
+              <% if !defined?(post_active) %>
+                <% post_active = "" %>
+              <% end %>
+              <li class="<%= blog_active+post_active %>" >
                 <a href="<%= locale_base_path %>/blog"><%= I18n.t('topmenu.blog') %></a>
               </li>
 
@@ -89,25 +92,30 @@
         <div class="span2">
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <!-- English -->
               <% if I18n.locale.to_s == 'en' %>
                 <% en_active = "active" %>
               <% else %>
                 <% en_active = "" %>
               <% end %>
-              <% if !defined?(en_hidden) %>
+              <% if I18n.locale.to_s == 'pt' %>
+                <% pt_active = "active" %>
+              <% else %>
+                <% pt_active = "" %>
+              <% end %>
+              <% lang_hidden = false %>
+              <% if post_active == "active" %>
+                <% lang_hidden = true %>
+              <% end %>
+
+              <!-- English -->
+              <% if !lang_hidden %>
               <li class="<%= en_active %>" >
                 <a href="<%= get_url_in_default_lang(current_page.url, I18n.locale) %>">english</a>
               </li>
               <% end %>
 
               <!-- Portuguese -->
-              <% if I18n.locale.to_s == 'pt' %>
-                <% pt_active = "active" %>
-              <% else %>
-                <% pt_active = "" %>
-              <% end %>
-              <% if !defined?(pt_hidden) %>
+              <% if !lang_hidden %>
                 <li class="<%= pt_active %>" >
                   <a href="/pt<%= get_url_in_default_lang(current_page.url, I18n.locale) %>">português</a>
                 </li>
