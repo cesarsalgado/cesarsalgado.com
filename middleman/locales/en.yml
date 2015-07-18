@@ -21,6 +21,9 @@ en:
     news: News
     no_news_yet: No news yet.
 
+  blog:
+    back_blog_main: Go back to list of posts
+
   curriculum:
     side_menu:
       resume: Resume

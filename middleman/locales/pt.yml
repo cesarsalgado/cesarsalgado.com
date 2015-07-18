@@ -21,6 +21,9 @@ pt:
     news: Novidades
     no_news_yet: Ainda sem novidades.
 
+  blog:
+    back_blog_main: Voltar para lista de posts
+
   curriculum:
     side_menu:
       resume: Currículo Resumido
