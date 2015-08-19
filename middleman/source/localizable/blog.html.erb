@@ -10,13 +10,15 @@ layout: layout
     <div class="page-header">
       <h2>Blog</h2>
     </div>
-    <% if blog.articles.empty? %>
-      <p class="lead"><%= I18n.t("blog.no_posts_yet") %></p>
-    <% end %>
+    <% n_articles = 0 %>
     <% blog.articles.each do |article| %>
       <% if article.lang.to_s == I18n.locale.to_s %>
         <p class="lead"><time><%= article.date.strftime("%b %d, %Y") %></time> - <a href="<%= article.url %>"><%= article.title %></a></p>
+        <% n_articles += 1 %>
       <% end %>
+    <% end %>
+    <% if n_articles == 0 %>
+      <p class="lead"><%= I18n.t("blog.no_posts_yet") %></p>
     <% end %>
   </section>
   
