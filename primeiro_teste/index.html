@@ -40,7 +40,8 @@
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
 
 
-    <!-- Navbar
+    
+<!-- Navbar
 ================================================== -->
 
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -66,7 +67,7 @@
               </li>
 
               <!-- Blog -->
-              <li class="" >
+              <li class="active" >
                 <a href="/pt/blog">Blog</a>
               </li>
 
@@ -88,7 +89,7 @@
               -->
 
               <!-- Contact -->
-              <li class="active" >
+              <li class="" >
                 <a href="/pt/contact">Contato</a>
               </li>
 
@@ -112,14 +113,8 @@
             <ul class="nav">
 
               <!-- English -->
-              <li class="" >
-                <a href="/contact/">english</a>
-              </li>
 
               <!-- Portuguese -->
-                <li class="active" >
-                  <a href="/pt/contact/">português</a>
-                </li>
             </ul>
           </div>
         </div>
@@ -131,30 +126,61 @@
 
 <div id="no-sidenav-container" class="container">
 
-  <section id="contact">
+  <section>
+    <a href="/pt/blog">Voltar para lista de posts</a>
     <div class="page-header">
-      <h1>Contato</h1>
-    </div>  
-
-    <p class="lead">Para obter meu e-mail preencha os campos abaixo de acordo com a<strong> regra</strong> e depois aperte "Mostrar E-mail".</p>
-
-    <p><strong>Regra</strong>: firstname -> cesar, 1 -> s , 2 -> v , 3 -> s</p>
-
-    <form id="generate_email_form" class="form-inline">
-      <input type="text" class="input-small" placeholder="firstname">
-      <input type="text" class="input-small" placeholder="1">
-      <input type="text" class="input-small" placeholder="2">
-      <input type="text" class="input-small" placeholder="3">
-      <button id="generate_email" type="submit" class="btn" >Mostrar E-mail</button>
-    </form>
-
-    <div class="lead">
-      <span id="generated_succesful_email" class="label label-success"></span>
-      <span id="generated_wrong_email" class="label label-important"></span>
+      <h1>Meu primeiro teste</h1>
     </div>
+    <h4><time>Jan 30, 2014</time></h4>
+    <br>
+    <div id="post_content">
+      <p>The test begin here.</p>
+
+<ul>
+<li>alhdljah</li>
+<li>alhdljah</li>
+<li>alhdljah</li>
+</ul>
+
+<p>Blasjdh alskdhjnfjk alskdhjlkh laksdhj</p>
+<div class="highlight python"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="n">a</span> <span class="o">=</span> <span class="s">'asjdhf'</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+  <span class="n">a</span> <span class="o">+=</span> <span class="s">'2'</span>
+<span class="k">print</span> <span class="n">a</span>
+</pre></td></tr></tbody></table>
+</div>
+
+<p>The end.</p>
+
+    </div>
+    <hr></hr>
+    <a href="/pt/blog">Voltar para lista de posts</a>
+    <hr></hr>
+    <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = "cesarsalgadopt"; // Required - Replace '<example>' with your forum shortname
+        var disqus_title = 'Meu primeiro teste';
+        var disqus_url = 'cesarsalgado.com/primeiro_teste/';
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <hr></hr>
+    <a href="/pt/blog">Voltar para lista de posts</a>
   </section>
 
+
 </div>
+
 
 
 
