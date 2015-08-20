@@ -1,0 +1,136 @@
+---
+title: Dilma-RNN
+published: true
+comments: true
+---
+
+Recentemente Andrej Karpathy, doutorando em Ciência de Computação em Stanford, disponibilizou o código de [**char-rnn**](https://github.com/karpathy/char-rnn) na internet que possibilita que você treine uma [Rede Neural Recorrente](ftp://ftp.dca.fee.unicamp.br/pub/docs/vonzuben/ia353_05/topico10_05.pdf) em textos para então poder gerar infinitos novos textos com estilo similar ao original. Você pode conferir seu ótimo [blog post](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) (em Inglês) explicando seus experimentos com **char-rnn**. O **char** no nome se refere ao fato de a rede tentar prever o próximo caractere dado os caracteres anteriores. Por exemplo, a rede aprende que o caractere 'a' muito provavelmente deve vir depois dos caracteres: 'c', 'a', 'd', 'e', 'i' e 'r'.
+
+No post de Andrej, a rede é treinada para gerar trechos de Shakespeare, artigos do Wikipédia, códigos fonte do Linux e artigos de matemática. Desde então várias outras pessoas tem utilizado o código de **char-rnn** para gerar diferentes tipos de textos. Dentre estes, já foram gerados [textos da bíblia](http://cpury.github.io/learning-holiness/), [*folk music*](https://highnoongmt.wordpress.com/2015/05/22/lisls-stis-recurrent-neural-networks-for-folk-music-generation/) e [discursos do Obama](https://medium.com/@samim/obama-rnn-machine-generated-political-speeches-c8abd18a2ea0).
+
+O seguinte artigo no site da Folha também fala sobre **char-rnn** e sua aplicação na geração de cartas do jogo "Magic": [A inteligência artificial que aprendeu a jogar 'Magic: The Gathering'](http://www1.folha.uol.com.br/vice/2015/06/1645013-a-inteligencia-artificial-que-aprendeu-a-jogar-magic-the-gathering.shtml).
+
+Eu decide treinar o **char-rnn** em um corpo textual em Português já que uma rápida pesquisa no Google<a name="pnote01" href="#note01"><sup>1</sup></a> mostrou que isto ainda não tinha sido feito. Inspirado no [**obama-rnn**](https://medium.com/@samim/obama-rnn-machine-generated-political-speeches-c8abd18a2ea0) eu decidi fazer um **dilma-rnn**, isto é, decidi treinar o **char-rnn** em vários discursos da presidenta Dilma. Para tanto, coletei 755 discursos da Dilma no site do [planalto](http://www2.planalto.gov.br/acompanhe-o-planalto/discursos/discursos-da-presidenta/) e juntei todos num mesmo arquivo de 9,1MB e treinei o algoritmo por mais de 2 horas. No total o arquivo tem 27 mil linhas.
+
+## Resultados
+
+Antes de mostrar os melhores resultados, vou mostrar o que a rede gera quando ela treina por pouco tempo.
+
+Se pararmos o treinamento quando a rede leu somente as primeiras 800 linhas (3%) do arquivo o resultado vai ser o seguinte:
+
+
+<!-- começa temp0_4_epoch0_03 -->
+
+> becararaneu amada arelalarararana, euanas as as aramamas e paarao aa uenoreranaraa ereremaratararaa oue ara
+
+<!-- termina temp0_4_epoch0_03 -->
+
+Como pode ser visto a rede não aprendeu nem a escrever palavras corretamente ainda.
+
+A seguir é mostrado o resultado quando a rede já leu 2500 linhas (9%) do arquivo:
+
+<!-- começa temp0_4_epoch0_09 -->
+
+> E não tem para mais de desso prosidente do Rendo de sunho de nosso desso dessa dos senhoras e de distram de empretado de dos dessos de entradado de crascimento de social, de senhoras do país.
+
+<!-- termina temp0_4_epoch0_09 -->
+
+Agora mais da metade das palavras do texto acima estão escritas corretamente.
+
+Depois de 7800 linhas lidas (29% do arquivo) a rede produz o seguinte resultado:
+
+<!-- começa temp0_4_epoch0_39 -->
+
+> E esse é um processo e de cada um de vocês, profissional de transporte para eles estão aqui presentes, e a linha de transporte de agora, esse processo, eu queria dizer que esse programa que ele também nós temos de transmissão de transmissão de grande esporta de energia e a miséria e de compramenta de qualidade, o que ela se transformar a primeira empregos
+
+<!-- termina temp0_4_epoch0_39 -->
+
+Podemos ver no trecho acima que a rede agora escreve corretamente quase todas as palavras, mas o texto não faz sentido numa sequência com mais de cinco palavras.
+
+Finalmente, vamos ver o resultado de uma rede que leu todo o arquivo 15 vezes:
+
+<!-- começa temp0_4_very_long -->
+
+>Boa tarde a todos.
+<br></br>
+>Eu queria cumprimentar o prefeito de São Paulo, Rosemba Braga, líder do governo no Congresso; José Roberto Marinho, de Porto Alegre, José Pimentel, líder do governo no Senado Federal,
+<br></br>
+>A senhora Maria do Rosário, da Secretaria de Direitos Humanos, eu cumprimento todos os ministros de Estado aqui presentes: Antonio Palocci, da Casa Civil; José Guimarães, do MDT, e agradecer a presença de todos os prefeitos que aqui compareceram aqui no estado do Maranhão. E queria dizer que eu estou muito feliz de estar aqui nesse momento em que eu considero muito importante porque estamos no caminho de trabalho e construímos a construção de uma pessoa que tem a ver com os senhores e das senhoras, e quero dizer para vocês que eu tenho certeza que a primeira visita é uma realidade em que as pessoas tenham acesso à casa própria. E essa é uma política de atenção básica de todos os programas e as condições de vida da população brasileira.
+<br></br>
+>Eu tenho certeza que esse é um programa para o Brasil. E aí, eu quero dizer para vocês que eu vou falar para vocês o seguinte: eu tenho certeza que o governo federal tem uma política de contenção de metrô. Ele passa por uma das maiores conquistas do povo brasileiro no campo. E aí, eu quero dizer para vocês que eu fico muito feliz com essa alegria que eu acho que é o fato de que ela é a força de trabalho e de comercialização do serviço público de qualidade, em que o Brasil tem de ser medido pela presença do mundo e da criança e o prefeito de cada um dos prefeitos. Por isso, eu acredito que nós temos de ter responsabilidades e respeitosas de direitos sociais, porque nós temos de assegurar que as pessoas tenham acesso ao ensino técnico para os municípios do nosso país. E não tem a possibilidade de ter direito a ter uma renda melhor para todos, tem de ser capaz de assegurar que o povo tem de ser concebido com essa conquista e essa força se conforma com a nossa população e a pobreza extrema. Essa situação é um país que tem uma política de compras governamentais, ou seja, ela tem de ser atendido. 
+<br></br>
+>Eu queria aqui destacar aqui que nós todos temos de aprender com o prefeito de São Paulo, em 2008, em especial o Bolsa Família, no que se refere ao desenvolvimento do país.
+
+<!-- termina temp0_4_very_long -->
+
+Caso deseje gerar mais textos da Dilma-RNN acesse o seguinte site que criei: [dilma-rnn.appspot.com](dilma-rnn.appspot.com)
+
+Antes de analisar o resultado acima, gostaria de observar que o objetivo da rede é gerar textos prováveis baseados no arquivo de treinamento, mas não necessariamente gerar uma cópia do arquivo original.
+
+Podemos ver que agora a rede além de escrever todas palavras corretamente, ela também consegue combiná-las de um modo que faça sentido por um período maior do que anteriormente. Ela aprendeu que um discurso é inciado com "Boa tarde" e depois vem os cumprimentos a pessoas relevantes para o discurso. Também aprendeu que depois dos cumprimentos vem a introdução da razão de ela estar na localidade.
+
+Alguma das descrições de pessoas estão corretas como da Maria do Rosário, já a do José Roberto Marinho não está já que ele não é de Porto Alegre. No entanto, é interessante que a rede aprendeu que após um nome e uma vírgula faz sentido colocar o nome de uma cidade. Lembre-se que a rede não tem nenhuma noção prévia dos conceitos de nomes de pessoas e cidades. Ela teve que aprender tudo do zero. Ela até gerou um nome inexistente, mas que tem uma sonoridade provável no caso de "Rosemba Braga".
+
+## Wikipedia
+
+Eu também treinei a rede em 1,5 milhões de linhas do Wikipédia em português. O *dump* do Wikipédia foi baixado no seguinte [link](https://dumps.wikimedia.org/ptwiki/20150703/ptwiki-20150703-pages-articles1.xml.bz2). O arquivo depois de processado tem 212MB. Para remover os símbolos indesejáveis do texto foi utilizado o código [ptwiki2text](https://github.com/erickrf/ptwiki2text) com uma modificação para manter os números intactos. Abaixo é mostrado o resultado da rede depois de ler o arquivo uma vez. Como o arquivo é muito grande não tive paciência para esperar a rede ler mais vezes.
+
+>A cidade de São Paulo foi um dos principais produtores do concelho de Boa Vista , em 1891 .
+<br></br>
+>O município possui uma população de 20,5 mil pessoas .
+<br></br>
+>O município de São João do Município é conhecida como " Santa Maria do Cervo " , que também foi destruída pelo sistema de residência de 15 km de diâmetro , com a presença de uma produção de pedras de mar , de forma que se encontra em metal , com uma capela de 10 metros de altura .
+<br></br>
+>O concelho de São Miguel de Santa Cruz de Fora , existente no centro da cidade , em 1857 , foi elevada à categoria de vila e sede de concelho .
+<br></br>
+>Desde o início do século XIX , o governo do Estado de São Paulo , através de uma receita provincial , respectivamente , possui algumas das mais antigas empresas de ensino superior do estado .
+<br></br>
+>A maioria dos campeões da província de São Paulo foi estabelecido em 1962 , pela primeira vez a 19 de Julho de 1957 .
+<br></br>
+>A cidade tem uma área de 12 km² , em 2010 .
+<br></br>
+>A cidade tem como criadores de cerca de 13 metros de altura , com o nome de Santa Catarina .
+<br></br>
+>Em 1891 , a cidade de São Paulo começou a se chamar Aldeia do Minho , em 1858 .
+<br></br>
+>A cidade tem uma área de 142,8 km² .
+<br></br>
+>As mesmas famílias e outras áreas do município são conhecidos como o do Paraíso .
+<br></br>
+>A extensão do freguesia é o mais populoso da ilha do Caraterá , na província de Castro .
+<br></br>
+>O município de Itabira foi criada por mais de 100 mil habitantes , em 2003 .
+<br></br>
+>A população de Manuel Luis de Almeida passou a ser dividida em três províncias , como o Porto de Castro , a Santa Maria de Sintra , o mar da Casa de Minas , a maior parte do povoado de Conceição , foi destruída pela sua construção , com a sede do concelho .
+<br></br>
+>A cidade pertence à Praia do Rio de Janeiro , com a denominação de São João da Misericórdia , a sede do concelho de São João de Lages , que participou de uma mistura de animais e construções de mando de segundo turista .
+>O município pertence ao rio Paraíba .
+
+## Alternativas à Rede Neural Recorrente
+
+É importante notar que existem outras formas de gerar textos automaticamente. Como mencionado por [Yoav Goldberg](https://twitter.com/yoavgo) no seu [post](http://nbviewer.ipython.org/gist/yoavg/d76121dfde2618422139#Unsmoothed-Maximum-Likelihood-Character-Level-Language-Model) um método chamado *Unsmoothed Maximum Likelihood Character Level Language Model* também consegue gerar textos bons. 
+
+Esse método simplesmente calcula a probabilidade do próximo caractere dado os últimos 15 caracteres (ou outro número fixo) por meio do cálculo da frequência com que a combinação de caracteres ocorre no texto de treinamento. No momento de gerar o texto, a cada instante um caractere é aleatoriamente escolhido com probabilidade proporcional à frequência calculada anteriormente.
+
+A seguir é mostrado o resultado para o método descrito acima (utilizando uma janela de 15 caracteres) treinado nos discursos da presidenta Dilma:
+
+>Boa tarde a todos, porque nós nunca estaremos de portas abertas para, depois, disputarem o seu lugar na sociedade. A gente vê a preocupação permanente da empresa DCNS, Hervé Guillou.
+<br></br>
+>Cumprimentar os jornalistas aqui presentes, que cuidassem, porque quando para a chuva, é fantástico a quantidade empresas, que hoje já opera um pólo presencial em Moçambique, são exemplos de criatividade.
+<br></br>
+>Nós sabemos que uma parte fundamental da garantia de direitos e pela redução dos custos de produção, de produtividade, garantir que o setor privado atuando de forma clara. É função nossa, com essas instituições trabalhadoras da Embraer. E cumprimentar todos os atletas. Eu estive com muitos deles lá em Londres. Eu vi os sonhos, eu vi a dedicação, pelo profissionalizante. E aí eu agradeço o desempenho, a atividade e as iniciativas de interconexão entre as pessoas e as instituições. Elas só podem chegar a 5% da renda, não podem mais de 5%. Então quem pagava aluguel ou se ela não pagará o financiamento para melhorar a nossa produtividade, 1/3 das reservas de petróleo já descobertos até hoje, e lá tem muito, mas muito importante pela quantidade de informação não só do euro, mas dos países desenvolvidos, nas economias de práticas como o dumping, através de protocolos e pacotes tecnológicos, que, aliás, aqui, em Minas Gerais, é lá em Uberaba, no Triângulo Mineiro, uma raça de gado que tão bem  se adaptou às característica do Alienista, que é o seguinte: nós chegamos com esse apagão habitacional. Por esse critério, aqueles municípios um acontecimento extremamente importante para a eficácia da entidade para auxiliar os Estados-membros e as Nações Unidas, nossos países dessa nova etapa dessa aliança. Ao realçar o setor de alta tecnologia também num mundo onde a vida, a qualidade das universidades, ter uma escola de ensino médio com o profissionalizante. São cursos gratuitos, bancados pelo governo, seja por sua capacidade. E agora, nós teremos dado um salto porque isso vai fazer diferença na vida da pessoa, lá dentro da casa, se você olhar e comparar com o resto dos países que mantém uma taxa elevada de crescimento sustentável.
+<br></br>
+>A Rio+20 projetou um poderoso facho de luz sobre o futuro que vem.
+<br></br>
+>Por isso, quando nós estávamos hoje diante do maior racionamento. As mesmas vozes que disseram que nós teríamos graves problemas que de outra forma de mobilidade urbana, para urbanização acelerada de bens de capital no âmbito do Viver sem Limite, nós realizamos. Eu tenho certeza disso.
+<br></br>
+>Muito obrigada.
+
+Esse texto também ficou interessante. Caso tenha achado que esse texto ficou superior ao gerado pela *RNN*, eu devo alertar que essa não é uma comparação justa, pois há diferenças no algoritmo de amostragem que não tive tempo de igualar nos dois métodos. Além disso, o último método pode estar [sobreajustando](https://pt.wikipedia.org/wiki/Sobreajuste) no conjunto de treinamento enquanto o primeiro me certifiquei que não estava. Uma comparação justa entre os dois métodos vai além do escopo desse post. 
+
+Se quiser saber mais sobre as vantagens e desvantagens de cada método sugiro que leia o seguinte artigo: [Visualizing and Understanding Recurrent Networks](http://arxiv.org/abs/1506.02078). Uma das conclusões desse artigo e do [post](http://nbviewer.ipython.org/gist/yoavg/d76121dfde2618422139#Unsmoothed-Maximum-Likelihood-Character-Level-Language-Model) do [Yoav Goldberg](https://twitter.com/yoavgo) é que a *RNN* é melhor em aprender padrões de longo prazo como abrir e fechar parênteses, enquanto o método baseado em frequência não vai conseguir aprender esse padrão para sequências maiores do que 15.
+
+<br></br>
+#### Notas
+
+<sub>1. Eu fiz as seguinte buscas no Google: **andrej karpathy char-rnn site:br** e **andrej karpathy char-rnn site:pt** <a name="note01" href="#pnote01">↑</a></sub>
