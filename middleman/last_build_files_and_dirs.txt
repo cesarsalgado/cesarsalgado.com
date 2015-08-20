@@ -7,11 +7,11 @@ contact
 content
 css
 curriculum
+dilma_rnn
 ico
 img
 index2
 index.html
 js
 more
-primeiro_teste
 pt

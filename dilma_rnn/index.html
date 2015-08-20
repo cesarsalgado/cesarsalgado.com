@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <title>cesarsalgado.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="/ico/favicon.png">
+
+    <script type="text/javascript">
+      // var _gaq = _gaq || [];
+      // _gaq.push(['_setAccount', 'UA-146052-10']);
+      // _gaq.push(['_trackPageview']);
+      // (function() {
+      //   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      //   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      //   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      // })();
+    </script>
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+
+    
+<!-- Navbar
+================================================== -->
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span10">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- Button to homepage -->
+          <a class="brand" href="/pt/">cesarsalgado.com</a>
+
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+
+              <!-- Home -->
+              <li class="" >
+                <a href="/pt/">Principal</a>
+              </li>
+
+              <!-- Blog -->
+              <li class="active" >
+                <a href="/pt/blog">Blog</a>
+              </li>
+
+              <!-- Curriculum -->
+              <li class="" >
+                <a href="/pt/curriculum">Curriculum</a>
+              </li>
+
+              <!-- Academic -->
+              <li class="" >
+                <a href="/pt/academic">Acadêmico</a>
+              </li>
+
+              <!-- About -->
+              <!--
+              <li class="" >
+                <a href="/pt/about">Bio</a>
+              </li>
+              -->
+
+              <!-- Contact -->
+              <li class="" >
+                <a href="/pt/contact">Contato</a>
+              </li>
+
+
+              <!-- Apps -->
+    <!--           
+              <li class="" >
+                <a href="/pt/apps">Apps</a>
+              </li>
+     -->
+    <!--           
+              <li class="" >
+                <a href="/pt/more">Mais</a>
+              </li>
+     -->        
+            </ul>
+          </div>
+        </div>
+        <div class="span2">
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+
+              <!-- English -->
+
+              <!-- Portuguese -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="no-sidenav-container" class="container">
+
+  <section>
+    <a href="/pt/blog">Voltar para lista de posts</a>
+    <div class="page-header">
+      <h1>Dilma-RNN</h1>
+    </div>
+
+    <h4><time>19/08/2015</time></h4>
+    <br>
+    <div id="post_content">
+      <p>Recentemente Andrej Karpathy, doutorando em Ciência de Computação em Stanford, disponibilizou o código de <a href="https://github.com/karpathy/char-rnn"><strong>char-rnn</strong></a> na internet que possibilita que você treine uma <a href="ftp://ftp.dca.fee.unicamp.br/pub/docs/vonzuben/ia353_05/topico10_05.pdf">Rede Neural Recorrente</a> em textos para então poder gerar infinitos novos textos com estilo similar ao original. Você pode conferir seu ótimo <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">blog post</a> (em Inglês) explicando seus experimentos com <strong>char-rnn</strong>. O <strong>char</strong> no nome se refere ao fato de a rede tentar prever o próximo caractere dado os caracteres anteriores. Por exemplo, a rede aprende que o caractere &lsquo;a&rsquo; muito provavelmente deve vir depois dos caracteres: &#39;c&rsquo;, &#39;a&rsquo;, &rsquo;d&rsquo;, &#39;e&rsquo;, &#39;i&rsquo; e &#39;r&rsquo;.</p>
+
+<p>No post de Andrej, a rede é treinada para gerar trechos de Shakespeare, artigos do Wikipédia, códigos fonte do Linux e artigos de matemática. Desde então várias outras pessoas tem utilizado o código de <strong>char-rnn</strong> para gerar diferentes tipos de textos. Dentre estes, já foram gerados <a href="http://cpury.github.io/learning-holiness/">textos da bíblia</a>, <a href="https://highnoongmt.wordpress.com/2015/05/22/lisls-stis-recurrent-neural-networks-for-folk-music-generation/"><em>folk music</em></a> e <a href="https://medium.com/@samim/obama-rnn-machine-generated-political-speeches-c8abd18a2ea0">discursos do Obama</a>.</p>
+
+<p>O seguinte artigo no site da Folha também fala sobre <strong>char-rnn</strong> e sua aplicação na geração de cartas do jogo &ldquo;Magic&rdquo;: <a href="http://www1.folha.uol.com.br/vice/2015/06/1645013-a-inteligencia-artificial-que-aprendeu-a-jogar-magic-the-gathering.shtml">A inteligência artificial que aprendeu a jogar &#39;Magic: The Gathering&rsquo;</a>.</p>
+
+<p>Eu decide treinar o <strong>char-rnn</strong> em um corpo textual em Português já que uma rápida pesquisa no Google<a name="pnote01" href="#note01"><sup>1</sup></a> mostrou que isto ainda não tinha sido feito. Inspirado no <a href="https://medium.com/@samim/obama-rnn-machine-generated-political-speeches-c8abd18a2ea0"><strong>obama-rnn</strong></a> eu decidi fazer um <strong>dilma-rnn</strong>, isto é, decidi treinar o <strong>char-rnn</strong> em vários discursos da presidenta Dilma. Para tanto, coletei 755 discursos da Dilma no site do <a href="http://www2.planalto.gov.br/acompanhe-o-planalto/discursos/discursos-da-presidenta/">planalto</a> e juntei todos num mesmo arquivo de 9,1MB e treinei o algoritmo por mais de 2 horas. No total o arquivo tem 27 mil linhas.</p>
+
+<h2>Resultados</h2>
+
+<p>Antes de mostrar os melhores resultados, vou mostrar o que a rede gera quando ela treina por pouco tempo.</p>
+
+<p>Se pararmos o treinamento quando a rede leu somente as primeiras 800 linhas (3%) do arquivo o resultado vai ser o seguinte:</p>
+
+<!-- começa temp0_4_epoch0_03 -->
+
+<blockquote>
+<p>becararaneu amada arelalarararana, euanas as as aramamas e paarao aa uenoreranaraa ereremaratararaa oue ara</p>
+</blockquote>
+
+<!-- termina temp0_4_epoch0_03 -->
+
+<p>Como pode ser visto a rede não aprendeu nem a escrever palavras corretamente ainda.</p>
+
+<p>A seguir é mostrado o resultado quando a rede já leu 2500 linhas (9%) do arquivo:</p>
+
+<!-- começa temp0_4_epoch0_09 -->
+
+<blockquote>
+<p>E não tem para mais de desso prosidente do Rendo de sunho de nosso desso dessa dos senhoras e de distram de empretado de dos dessos de entradado de crascimento de social, de senhoras do país.</p>
+</blockquote>
+
+<!-- termina temp0_4_epoch0_09 -->
+
+<p>Agora mais da metade das palavras do texto acima estão escritas corretamente.</p>
+
+<p>Depois de 7800 linhas lidas (29% do arquivo) a rede produz o seguinte resultado:</p>
+
+<!-- começa temp0_4_epoch0_39 -->
+
+<blockquote>
+<p>E esse é um processo e de cada um de vocês, profissional de transporte para eles estão aqui presentes, e a linha de transporte de agora, esse processo, eu queria dizer que esse programa que ele também nós temos de transmissão de transmissão de grande esporta de energia e a miséria e de compramenta de qualidade, o que ela se transformar a primeira empregos</p>
+</blockquote>
+
+<!-- termina temp0_4_epoch0_39 -->
+
+<p>Podemos ver no trecho acima que a rede agora escreve corretamente quase todas as palavras, mas o texto não faz sentido numa sequência com mais de cinco palavras.</p>
+
+<p>Finalmente, vamos ver o resultado de uma rede que leu todo o arquivo 15 vezes:</p>
+
+<!-- começa temp0_4_very_long -->
+
+<blockquote>
+<p>Boa tarde a todos.
+<br></br>
+Eu queria cumprimentar o prefeito de São Paulo, Rosemba Braga, líder do governo no Congresso; José Roberto Marinho, de Porto Alegre, José Pimentel, líder do governo no Senado Federal,
+<br></br>
+A senhora Maria do Rosário, da Secretaria de Direitos Humanos, eu cumprimento todos os ministros de Estado aqui presentes: Antonio Palocci, da Casa Civil; José Guimarães, do MDT, e agradecer a presença de todos os prefeitos que aqui compareceram aqui no estado do Maranhão. E queria dizer que eu estou muito feliz de estar aqui nesse momento em que eu considero muito importante porque estamos no caminho de trabalho e construímos a construção de uma pessoa que tem a ver com os senhores e das senhoras, e quero dizer para vocês que eu tenho certeza que a primeira visita é uma realidade em que as pessoas tenham acesso à casa própria. E essa é uma política de atenção básica de todos os programas e as condições de vida da população brasileira.
+<br></br>
+Eu tenho certeza que esse é um programa para o Brasil. E aí, eu quero dizer para vocês que eu vou falar para vocês o seguinte: eu tenho certeza que o governo federal tem uma política de contenção de metrô. Ele passa por uma das maiores conquistas do povo brasileiro no campo. E aí, eu quero dizer para vocês que eu fico muito feliz com essa alegria que eu acho que é o fato de que ela é a força de trabalho e de comercialização do serviço público de qualidade, em que o Brasil tem de ser medido pela presença do mundo e da criança e o prefeito de cada um dos prefeitos. Por isso, eu acredito que nós temos de ter responsabilidades e respeitosas de direitos sociais, porque nós temos de assegurar que as pessoas tenham acesso ao ensino técnico para os municípios do nosso país. E não tem a possibilidade de ter direito a ter uma renda melhor para todos, tem de ser capaz de assegurar que o povo tem de ser concebido com essa conquista e essa força se conforma com a nossa população e a pobreza extrema. Essa situação é um país que tem uma política de compras governamentais, ou seja, ela tem de ser atendido. 
+<br></br>
+Eu queria aqui destacar aqui que nós todos temos de aprender com o prefeito de São Paulo, em 2008, em especial o Bolsa Família, no que se refere ao desenvolvimento do país.</p>
+</blockquote>
+
+<!-- termina temp0_4_very_long -->
+
+<p>Caso deseje gerar mais textos da Dilma-RNN acesse o seguinte site que criei: <a href="dilma-rnn.appspot.com">dilma-rnn.appspot.com</a></p>
+
+<p>Antes de analisar o resultado acima, gostaria de observar que o objetivo da rede é gerar textos prováveis baseados no arquivo de treinamento, mas não necessariamente gerar uma cópia do arquivo original.</p>
+
+<p>Podemos ver que agora a rede além de escrever todas palavras corretamente, ela também consegue combiná-las de um modo que faça sentido por um período maior do que anteriormente. Ela aprendeu que um discurso é inciado com &ldquo;Boa tarde&rdquo; e depois vem os cumprimentos a pessoas relevantes para o discurso. Também aprendeu que depois dos cumprimentos vem a introdução da razão de ela estar na localidade.</p>
+
+<p>Alguma das descrições de pessoas estão corretas como da Maria do Rosário, já a do José Roberto Marinho não está já que ele não é de Porto Alegre. No entanto, é interessante que a rede aprendeu que após um nome e uma vírgula faz sentido colocar o nome de uma cidade. Lembre-se que a rede não tem nenhuma noção prévia dos conceitos de nomes de pessoas e cidades. Ela teve que aprender tudo do zero. Ela até gerou um nome inexistente, mas que tem uma sonoridade provável no caso de &ldquo;Rosemba Braga&rdquo;.</p>
+
+<h2>Wikipedia</h2>
+
+<p>Eu também treinei a rede em 1,5 milhões de linhas do Wikipédia em português. O <em>dump</em> do Wikipédia foi baixado no seguinte <a href="https://dumps.wikimedia.org/ptwiki/20150703/ptwiki-20150703-pages-articles1.xml.bz2">link</a>. O arquivo depois de processado tem 212MB. Para remover os símbolos indesejáveis do texto foi utilizado o código <a href="https://github.com/erickrf/ptwiki2text">ptwiki2text</a> com uma modificação para manter os números intactos. Abaixo é mostrado o resultado da rede depois de ler o arquivo uma vez. Como o arquivo é muito grande não tive paciência para esperar a rede ler mais vezes.</p>
+
+<blockquote>
+<p>A cidade de São Paulo foi um dos principais produtores do concelho de Boa Vista , em 1891 .
+<br></br>
+O município possui uma população de 20,5 mil pessoas .
+<br></br>
+O município de São João do Município é conhecida como &ldquo; Santa Maria do Cervo &rdquo; , que também foi destruída pelo sistema de residência de 15 km de diâmetro , com a presença de uma produção de pedras de mar , de forma que se encontra em metal , com uma capela de 10 metros de altura .
+<br></br>
+O concelho de São Miguel de Santa Cruz de Fora , existente no centro da cidade , em 1857 , foi elevada à categoria de vila e sede de concelho .
+<br></br>
+Desde o início do século XIX , o governo do Estado de São Paulo , através de uma receita provincial , respectivamente , possui algumas das mais antigas empresas de ensino superior do estado .
+<br></br>
+A maioria dos campeões da província de São Paulo foi estabelecido em 1962 , pela primeira vez a 19 de Julho de 1957 .
+<br></br>
+A cidade tem uma área de 12 km² , em 2010 .
+<br></br>
+A cidade tem como criadores de cerca de 13 metros de altura , com o nome de Santa Catarina .
+<br></br>
+Em 1891 , a cidade de São Paulo começou a se chamar Aldeia do Minho , em 1858 .
+<br></br>
+A cidade tem uma área de 142,8 km² .
+<br></br>
+As mesmas famílias e outras áreas do município são conhecidos como o do Paraíso .
+<br></br>
+A extensão do freguesia é o mais populoso da ilha do Caraterá , na província de Castro .
+<br></br>
+O município de Itabira foi criada por mais de 100 mil habitantes , em 2003 .
+<br></br>
+A população de Manuel Luis de Almeida passou a ser dividida em três províncias , como o Porto de Castro , a Santa Maria de Sintra , o mar da Casa de Minas , a maior parte do povoado de Conceição , foi destruída pela sua construção , com a sede do concelho .
+<br></br>
+A cidade pertence à Praia do Rio de Janeiro , com a denominação de São João da Misericórdia , a sede do concelho de São João de Lages , que participou de uma mistura de animais e construções de mando de segundo turista .
+O município pertence ao rio Paraíba .</p>
+</blockquote>
+
+<h2>Alternativas à Rede Neural Recorrente</h2>
+
+<p>É importante notar que existem outras formas de gerar textos automaticamente. Como mencionado por <a href="https://twitter.com/yoavgo">Yoav Goldberg</a> no seu <a href="http://nbviewer.ipython.org/gist/yoavg/d76121dfde2618422139#Unsmoothed-Maximum-Likelihood-Character-Level-Language-Model">post</a> um método chamado <em>Unsmoothed Maximum Likelihood Character Level Language Model</em> também consegue gerar textos bons. </p>
+
+<p>Esse método simplesmente calcula a probabilidade do próximo caractere dado os últimos 15 caracteres (ou outro número fixo) por meio do cálculo da frequência com que a combinação de caracteres ocorre no texto de treinamento. No momento de gerar o texto, a cada instante um caractere é aleatoriamente escolhido com probabilidade proporcional à frequência calculada anteriormente.</p>
+
+<p>A seguir é mostrado o resultado para o método descrito acima (utilizando uma janela de 15 caracteres) treinado nos discursos da presidenta Dilma:</p>
+
+<blockquote>
+<p>Boa tarde a todos, porque nós nunca estaremos de portas abertas para, depois, disputarem o seu lugar na sociedade. A gente vê a preocupação permanente da empresa DCNS, Hervé Guillou.
+<br></br>
+Cumprimentar os jornalistas aqui presentes, que cuidassem, porque quando para a chuva, é fantástico a quantidade empresas, que hoje já opera um pólo presencial em Moçambique, são exemplos de criatividade.
+<br></br>
+Nós sabemos que uma parte fundamental da garantia de direitos e pela redução dos custos de produção, de produtividade, garantir que o setor privado atuando de forma clara. É função nossa, com essas instituições trabalhadoras da Embraer. E cumprimentar todos os atletas. Eu estive com muitos deles lá em Londres. Eu vi os sonhos, eu vi a dedicação, pelo profissionalizante. E aí eu agradeço o desempenho, a atividade e as iniciativas de interconexão entre as pessoas e as instituições. Elas só podem chegar a 5% da renda, não podem mais de 5%. Então quem pagava aluguel ou se ela não pagará o financiamento para melhorar a nossa produtividade, 1/3 das reservas de petróleo já descobertos até hoje, e lá tem muito, mas muito importante pela quantidade de informação não só do euro, mas dos países desenvolvidos, nas economias de práticas como o dumping, através de protocolos e pacotes tecnológicos, que, aliás, aqui, em Minas Gerais, é lá em Uberaba, no Triângulo Mineiro, uma raça de gado que tão bem  se adaptou às característica do Alienista, que é o seguinte: nós chegamos com esse apagão habitacional. Por esse critério, aqueles municípios um acontecimento extremamente importante para a eficácia da entidade para auxiliar os Estados-membros e as Nações Unidas, nossos países dessa nova etapa dessa aliança. Ao realçar o setor de alta tecnologia também num mundo onde a vida, a qualidade das universidades, ter uma escola de ensino médio com o profissionalizante. São cursos gratuitos, bancados pelo governo, seja por sua capacidade. E agora, nós teremos dado um salto porque isso vai fazer diferença na vida da pessoa, lá dentro da casa, se você olhar e comparar com o resto dos países que mantém uma taxa elevada de crescimento sustentável.
+<br></br>
+A Rio+20 projetou um poderoso facho de luz sobre o futuro que vem.
+<br></br>
+Por isso, quando nós estávamos hoje diante do maior racionamento. As mesmas vozes que disseram que nós teríamos graves problemas que de outra forma de mobilidade urbana, para urbanização acelerada de bens de capital no âmbito do Viver sem Limite, nós realizamos. Eu tenho certeza disso.
+<br></br>
+Muito obrigada.</p>
+</blockquote>
+
+<p>Esse texto também ficou interessante. Caso tenha achado que esse texto ficou superior ao gerado pela <em>RNN</em>, eu devo alertar que essa não é uma comparação justa, pois há diferenças no algoritmo de amostragem que não tive tempo de igualar nos dois métodos. Além disso, o último método pode estar <a href="https://pt.wikipedia.org/wiki/Sobreajuste">sobreajustando</a> no conjunto de treinamento enquanto o primeiro me certifiquei que não estava. Uma comparação justa entre os dois métodos vai além do escopo desse post. </p>
+
+<p>Se quiser saber mais sobre as vantagens e desvantagens de cada método sugiro que leia o seguinte artigo: <a href="http://arxiv.org/abs/1506.02078">Visualizing and Understanding Recurrent Networks</a>. Uma das conclusões desse artigo e do <a href="http://nbviewer.ipython.org/gist/yoavg/d76121dfde2618422139#Unsmoothed-Maximum-Likelihood-Character-Level-Language-Model">post</a> do <a href="https://twitter.com/yoavgo">Yoav Goldberg</a> é que a <em>RNN</em> é melhor em aprender padrões de longo prazo como abrir e fechar parênteses, enquanto o método baseado em frequência não vai conseguir aprender esse padrão para sequências maiores do que 15.</p>
+
+<p><br></br></p>
+
+<h4>Notas</h4>
+
+<p><sub>1. Eu fiz as seguinte buscas no Google: <strong>andrej karpathy char-rnn site:br</strong> e <strong>andrej karpathy char-rnn site:pt</strong> <a name="note01" href="#pnote01">↑</a></sub></p>
+
+    </div>
+    <hr></hr>
+    <a href="/pt/blog">Voltar para lista de posts</a>
+      <hr></hr>
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = "cesarsalgadopt"; // Required - Replace '<example>' with your forum shortname
+          var disqus_title = 'Dilma-RNN';
+          var disqus_url = 'http://cesarsalgado.com/dilma_rnn/';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <hr></hr>
+      <a href="/pt/blog">Voltar para lista de posts</a>
+  </section>
+
+
+</div>
+
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p>Hospedado em <a href='http://pages.github.com'>Github Pages</a> e criado com <a href='http://middlemanapp.com'>Middleman</a>.</p>
+        <p>Esse site usou como ponto de partida o <a href='http://getbootstrap.com/2.3.2/'>Bootstrap 2.3.2 Docs site</a>.</p>
+        <p>Esse trabalho está licenciado sob <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <ul class="footer-links">
+          <li><a href='http://www.linkedin.com/pub/cesar-salgado/13/641/505'>Linkedin</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href='https://plus.google.com/100294158210704939412'>Google+</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href='http://www.facebook.com/cesar.salgado.332'>Facebook</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href='https://twitter.com/cesarsvs'>Twitter</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://www.quora.com/Cesar-Salgado-1">Quora</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href='https://github.com/cesarsalgado'>Github</a></li>
+          <!--<li class="muted">&middot;</li>
+          <li><a href='http://stackoverflow.com/users/604964/cesarsalgado'>Stack Overflow</a></li>-->
+          <li class="muted">&middot;</li>
+          <li><a href='https://www.coursera.org/user/i/79af8cc4af779e350b4a6d2c09cb09a7'>Coursera</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href='https://www.kaggle.com/users/118042/cesar'>Kaggle</a></li>
+        </ul>
+      </div>
+    </footer>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap-transition.js"></script>
+    <script src="/js/bootstrap-alert.js"></script>
+    <script src="/js/bootstrap-modal.js"></script>
+    <script src="/js/bootstrap-dropdown.js"></script>
+    <script src="/js/bootstrap-scrollspy.js"></script>
+    <script src="/js/bootstrap-tab.js"></script>
+    <script src="/js/bootstrap-tooltip.js"></script>
+    <script src="/js/bootstrap-popover.js"></script>
+    <script src="/js/bootstrap-button.js"></script>
+    <script src="/js/bootstrap-collapse.js"></script>
+    <script src="/js/bootstrap-carousel.js"></script>
+    <script src="/js/bootstrap-typeahead.js"></script>
+    <script src="/js/bootstrap-affix.js"></script>
+
+    <script src="/js/holder/holder.js"></script>
+    <script src="/js/google-code-prettify/prettify.js"></script>
+
+    <script src="/js/application.js"></script>
+
+
+    <!-- Analytics
+    ================================================== -->
+    <script>
+      // var _gauges = _gauges || [];
+      // (function() {
+      //   var t   = document.createElement('script');
+      //   t.type  = 'text/javascript';
+      //   t.async = true;
+      //   t.id    = 'gauges-tracker';
+      //   t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+      //   t.src = '//secure.gaug.es/track.js';
+      //   var s = document.getElementsByTagName('script')[0];
+      //   s.parentNode.insertBefore(t, s);
+      // })();
+    </script>
+
+  </body>
+</html>
