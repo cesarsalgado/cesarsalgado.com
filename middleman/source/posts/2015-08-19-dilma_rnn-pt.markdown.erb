@@ -10,7 +10,7 @@ No post de Andrej, a rede é treinada para gerar trechos de Shakespeare, artigos
 
 O seguinte artigo no site da Folha também fala sobre **char-rnn** e sua aplicação na geração de cartas do jogo "Magic": [A inteligência artificial que aprendeu a jogar 'Magic: The Gathering'](http://www1.folha.uol.com.br/vice/2015/06/1645013-a-inteligencia-artificial-que-aprendeu-a-jogar-magic-the-gathering.shtml).
 
-Eu decide treinar o **char-rnn** em um corpo textual em Português já que uma rápida pesquisa no Google<a name="pnote01" href="#note01"><sup>1</sup></a> mostrou que isto ainda não tinha sido feito. Inspirado no [**obama-rnn**](https://medium.com/@samim/obama-rnn-machine-generated-political-speeches-c8abd18a2ea0) eu decidi fazer um **dilma-rnn**, isto é, decidi treinar o **char-rnn** em vários discursos da presidenta Dilma. Para tanto, coletei 755 discursos da Dilma no site do [planalto](http://www2.planalto.gov.br/acompanhe-o-planalto/discursos/discursos-da-presidenta/) e juntei todos num mesmo arquivo de 9,1MB e treinei o algoritmo por mais de 2 horas. No total o arquivo tem 27 mil linhas.
+Eu resolvi treinar o **char-rnn** em um corpo textual em Português já que uma rápida pesquisa no Google<a name="pnote01" href="#note01"><sup>1</sup></a> mostrou que isto ainda não tinha sido feito. Inspirado no [**obama-rnn**](https://medium.com/@samim/obama-rnn-machine-generated-political-speeches-c8abd18a2ea0) eu decidi fazer um **dilma-rnn**, isto é, decidi treinar o **char-rnn** em vários discursos da presidenta Dilma. Para tanto, coletei 755 discursos da Dilma no site do [planalto](http://www2.planalto.gov.br/acompanhe-o-planalto/discursos/discursos-da-presidenta/) e juntei todos num mesmo arquivo de 9,1MB e treinei o algoritmo por mais de 2 horas. No total o arquivo tem 27 mil linhas.
 
 ## Resultados
 
@@ -67,13 +67,13 @@ Caso deseje gerar mais textos da Dilma-RNN acesse o seguinte site que criei: [di
 
 Antes de analisar o resultado acima, gostaria de observar que o objetivo da rede é gerar textos prováveis baseados no arquivo de treinamento, mas não necessariamente gerar uma cópia do arquivo original.
 
-Podemos ver que agora a rede além de escrever todas palavras corretamente, ela também consegue combiná-las de um modo que faça sentido por um período maior do que anteriormente. Ela aprendeu que um discurso é inciado com "Boa tarde" e depois vem os cumprimentos a pessoas relevantes para o discurso. Também aprendeu que depois dos cumprimentos vem a introdução da razão de ela estar na localidade.
+Podemos ver que agora a rede além de escrever todas as palavras corretamente, ela também consegue combiná-las de um modo que faça sentido por um período maior do que anteriormente. Ela aprendeu que um discurso é inciado com "Boa tarde" e depois vem os cumprimentos a pessoas relevantes para o discurso. Também aprendeu que depois dos cumprimentos vem a introdução da razão de ela estar na localidade.
 
 Alguma das descrições de pessoas estão corretas como da Maria do Rosário, já a do José Roberto Marinho não está já que ele não é de Porto Alegre. No entanto, é interessante que a rede aprendeu que após um nome e uma vírgula faz sentido colocar o nome de uma cidade. Lembre-se que a rede não tem nenhuma noção prévia dos conceitos de nomes de pessoas e cidades. Ela teve que aprender tudo do zero. Ela até gerou um nome inexistente, mas que tem uma sonoridade provável no caso de "Rosemba Braga".
 
 ## Wikipedia
 
-Eu também treinei a rede em 1,5 milhões de linhas do Wikipédia em português. O *dump* do Wikipédia foi baixado no seguinte [link](https://dumps.wikimedia.org/ptwiki/20150703/ptwiki-20150703-pages-articles1.xml.bz2). O arquivo depois de processado tem 212MB. Para remover os símbolos indesejáveis do texto foi utilizado o código [ptwiki2text](https://github.com/erickrf/ptwiki2text) com uma modificação para manter os números intactos. Abaixo é mostrado o resultado da rede depois de ler o arquivo uma vez. Como o arquivo é muito grande não tive paciência para esperar a rede ler mais vezes.
+Eu também treinei a rede em 1,5 milhões de linhas do Wikipédia em português. O *dump* do Wikipédia foi baixado no seguinte [link](https://dumps.wikimedia.org/ptwiki/20150703/ptwiki-20150703-pages-articles1.xml.bz2). O arquivo depois de processado tem 212MB. Para remover os símbolos indesejáveis do texto foi utilizado o código [ptwiki2text](https://github.com/erickrf/ptwiki2text) com uma modificação para manter os números intactos. Abaixo é mostrado o resultado da rede depois de ler o arquivo uma vez. Como o arquivo é muito grande não tive paciência para esperar a rede ler mais vezes =P
 
 >A cidade de São Paulo foi um dos principais produtores do concelho de Boa Vista , em 1891 .
 <br></br>
