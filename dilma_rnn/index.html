@@ -132,7 +132,7 @@
 
 <p>O seguinte artigo no site da Folha também fala sobre <strong>char-rnn</strong> e sua aplicação na geração de cartas do jogo &ldquo;Magic&rdquo;: <a href="http://www1.folha.uol.com.br/vice/2015/06/1645013-a-inteligencia-artificial-que-aprendeu-a-jogar-magic-the-gathering.shtml">A inteligência artificial que aprendeu a jogar &#39;Magic: The Gathering&rsquo;</a>.</p>
 
-<p>Eu resolvi treinar o <strong>char-rnn</strong> em um corpo textual em Português já que uma rápida pesquisa no Google<a name="pnote01" href="#note01"><sup>1</sup></a> mostrou que isto ainda não tinha sido feito. Inspirado no <a href="https://medium.com/@samim/obama-rnn-machine-generated-political-speeches-c8abd18a2ea0"><strong>obama-rnn</strong></a> eu decidi fazer um <strong>dilma-rnn</strong>, isto é, decidi treinar o <strong>char-rnn</strong> em vários discursos da presidenta Dilma. Para tanto, coletei 755 discursos da Dilma no site do <a href="http://www2.planalto.gov.br/acompanhe-o-planalto/discursos/discursos-da-presidenta/">planalto</a> e juntei todos num mesmo arquivo de 9,1MB e treinei o algoritmo por mais de 2 horas. No total o arquivo tem 27 mil linhas.</p>
+<p>Eu resolvi treinar o <strong>char-rnn</strong> em um corpo textual em português já que uma rápida pesquisa no Google<a name="pnote01" href="#note01"><sup>1</sup></a> mostrou que isto ainda não tinha sido feito. Inspirado no <a href="https://medium.com/@samim/obama-rnn-machine-generated-political-speeches-c8abd18a2ea0"><strong>obama-rnn</strong></a> eu decidi fazer um <strong>dilma-rnn</strong>, isto é, decidi treinar o <strong>char-rnn</strong> em vários discursos da presidenta Dilma. Para tanto, coletei 755 discursos da Dilma no site do <a href="http://www2.planalto.gov.br/acompanhe-o-planalto/discursos/discursos-da-presidenta/">planalto</a> e juntei todos num mesmo arquivo de 9,1MB e treinei o algoritmo por mais de 2 horas. No total o arquivo tem 27 mil linhas.</p>
 
 <h2>Resultados</h2>
 
@@ -174,7 +174,7 @@
 
 <p>Podemos ver no trecho acima que a rede agora escreve corretamente quase todas as palavras, mas o texto não faz sentido numa sequência com mais de cinco palavras.</p>
 
-<p>Finalmente, vamos ver o resultado de uma rede que leu todo o arquivo 15 vezes:</p>
+<p>Finalmente, vamos ver o resultado de uma rede que leu todo o arquivo 15 vezes<a name="pnote02" href="#note02"><sup>2</sup></a>:</p>
 
 <!-- começa temp0_4_very_long -->
 
@@ -268,6 +268,8 @@ Muito obrigada.</p>
 <h4>Notas</h4>
 
 <p><sub>1. Eu fiz as seguinte buscas no Google: <strong>andrej karpathy char-rnn site:br</strong> e <strong>andrej karpathy char-rnn site:pt</strong> <a name="note01" href="#pnote01">↑</a></sub></p>
+
+<p><sub>2. Na verdade foi lido 95% do arquivo 15 vezes, pois 5% do arquivo foi separado para o conjunto de validação para poder checar se o modelo não estava sobreajustando. <a name="note02" href="#pnote02">↑</a></sub></p>
 
     </div>
     <hr></hr>

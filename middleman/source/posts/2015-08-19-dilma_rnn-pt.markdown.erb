@@ -10,7 +10,7 @@ No post de Andrej, a rede é treinada para gerar trechos de Shakespeare, artigos
 
 O seguinte artigo no site da Folha também fala sobre **char-rnn** e sua aplicação na geração de cartas do jogo "Magic": [A inteligência artificial que aprendeu a jogar 'Magic: The Gathering'](http://www1.folha.uol.com.br/vice/2015/06/1645013-a-inteligencia-artificial-que-aprendeu-a-jogar-magic-the-gathering.shtml).
 
-Eu resolvi treinar o **char-rnn** em um corpo textual em Português já que uma rápida pesquisa no Google<a name="pnote01" href="#note01"><sup>1</sup></a> mostrou que isto ainda não tinha sido feito. Inspirado no [**obama-rnn**](https://medium.com/@samim/obama-rnn-machine-generated-political-speeches-c8abd18a2ea0) eu decidi fazer um **dilma-rnn**, isto é, decidi treinar o **char-rnn** em vários discursos da presidenta Dilma. Para tanto, coletei 755 discursos da Dilma no site do [planalto](http://www2.planalto.gov.br/acompanhe-o-planalto/discursos/discursos-da-presidenta/) e juntei todos num mesmo arquivo de 9,1MB e treinei o algoritmo por mais de 2 horas. No total o arquivo tem 27 mil linhas.
+Eu resolvi treinar o **char-rnn** em um corpo textual em português já que uma rápida pesquisa no Google<a name="pnote01" href="#note01"><sup>1</sup></a> mostrou que isto ainda não tinha sido feito. Inspirado no [**obama-rnn**](https://medium.com/@samim/obama-rnn-machine-generated-political-speeches-c8abd18a2ea0) eu decidi fazer um **dilma-rnn**, isto é, decidi treinar o **char-rnn** em vários discursos da presidenta Dilma. Para tanto, coletei 755 discursos da Dilma no site do [planalto](http://www2.planalto.gov.br/acompanhe-o-planalto/discursos/discursos-da-presidenta/) e juntei todos num mesmo arquivo de 9,1MB e treinei o algoritmo por mais de 2 horas. No total o arquivo tem 27 mil linhas.
 
 ## Resultados
 
@@ -47,7 +47,7 @@ Depois de 7800 linhas lidas (29% do arquivo) a rede produz o seguinte resultado:
 
 Podemos ver no trecho acima que a rede agora escreve corretamente quase todas as palavras, mas o texto não faz sentido numa sequência com mais de cinco palavras.
 
-Finalmente, vamos ver o resultado de uma rede que leu todo o arquivo 15 vezes:
+Finalmente, vamos ver o resultado de uma rede que leu todo o arquivo 15 vezes<a name="pnote02" href="#note02"><sup>2</sup></a>:
 
 <!-- começa temp0_4_very_long -->
 
@@ -134,3 +134,5 @@ Se quiser saber mais sobre as vantagens e desvantagens de cada método sugiro qu
 #### Notas
 
 <sub>1. Eu fiz as seguinte buscas no Google: **andrej karpathy char-rnn site:br** e **andrej karpathy char-rnn site:pt** <a name="note01" href="#pnote01">↑</a></sub>
+
+<sub>2. Na verdade foi lido 95% do arquivo 15 vezes, pois 5% do arquivo foi separado para o conjunto de validação para poder checar se o modelo não estava sobreajustando. <a name="note02" href="#pnote02">↑</a></sub>
