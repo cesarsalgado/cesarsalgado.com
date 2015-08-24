@@ -7,6 +7,9 @@ comments: true
 <p align="center">
   <img src="/img/dilma_rnn.jpg" title="dilma-rnn robot"></img>
 </p>
+<p align="center">
+  <small>Fonte da imagem</small><a name="pnote00" href="#note00"><sup>0</sup></a>
+</p>
 
 Recentemente Andrej Karpathy, doutorando em Ciência de Computação em Stanford, disponibilizou o código de [**char-rnn**](https://github.com/karpathy/char-rnn) na internet que possibilita que você treine uma [Rede Neural Recorrente](ftp://ftp.dca.fee.unicamp.br/pub/docs/vonzuben/ia353_05/topico10_05.pdf) em textos para então poder gerar infinitos novos textos com estilo similar ao original. Você pode conferir seu ótimo [blog post](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) (em Inglês) explicando seus experimentos com **char-rnn**. O **char** no nome se refere ao fato de a rede tentar prever o próximo caractere dado os caracteres anteriores. Por exemplo, a rede aprende que o caractere 'a' muito provavelmente deve vir depois da sequência de caracteres: "cadeir".
 
@@ -134,12 +137,14 @@ Esse texto também ficou interessante. Caso tenha achado que esse texto ficou su
 
 Se quiser saber mais sobre as vantagens e desvantagens de cada método sugiro que leia o seguinte artigo: [Visualizing and Understanding Recurrent Networks](http://arxiv.org/abs/1506.02078). Uma das conclusões desse artigo e do [post](http://nbviewer.ipython.org/gist/yoavg/d76121dfde2618422139#Unsmoothed-Maximum-Likelihood-Character-Level-Language-Model) do [Yoav Goldberg](https://twitter.com/yoavgo) é que a *RNN* é melhor em aprender padrões de longo prazo como abrir e fechar parênteses, enquanto o método baseado em frequência não vai conseguir aprender esse padrão para sequências maiores do que 15.
 
-### Edits:
+### Atualizações: 
 
 [Discussão](https://www.reddit.com/r/brasil/comments/3i4g0w/programa_que_gera_novos_discursos_da_dilma_usando/) no reddit.com/r/brasil
 
 <br></br>
 #### Notas
+#
+<sub>0. Montagem a partir de duas imagens -> Robô: https://www.flickr.com/photos/shuichi/3623630477 ; Dilma: https://commons.wikimedia.org/wiki/File:Dilma_Rousseff_Porto_Alegre_2010.jpg  <a name="note00" href="#pnote00">↑</a></sub>
 
 <sub>1. Eu fiz as seguinte buscas no Google: **andrej karpathy char-rnn site:br** e **andrej karpathy char-rnn site:pt** <a name="note01" href="#pnote01">↑</a></sub>
 
