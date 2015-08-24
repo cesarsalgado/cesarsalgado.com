@@ -126,7 +126,11 @@
     <h4><time>19/08/2015</time></h4>
     <br>
     <div id="post_content">
-      <p>Recentemente Andrej Karpathy, doutorando em Ciência de Computação em Stanford, disponibilizou o código de <a href="https://github.com/karpathy/char-rnn"><strong>char-rnn</strong></a> na internet que possibilita que você treine uma <a href="ftp://ftp.dca.fee.unicamp.br/pub/docs/vonzuben/ia353_05/topico10_05.pdf">Rede Neural Recorrente</a> em textos para então poder gerar infinitos novos textos com estilo similar ao original. Você pode conferir seu ótimo <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">blog post</a> (em Inglês) explicando seus experimentos com <strong>char-rnn</strong>. O <strong>char</strong> no nome se refere ao fato de a rede tentar prever o próximo caractere dado os caracteres anteriores. Por exemplo, a rede aprende que o caractere &lsquo;a&rsquo; muito provavelmente deve vir depois da sequência de caracteres: &ldquo;cadeir&rdquo;.</p>
+      <p align="center">
+  <img src="/img/dilma_rnn.jpg" title="dilma-rnn robot"></img>
+</p>
+
+<p>Recentemente Andrej Karpathy, doutorando em Ciência de Computação em Stanford, disponibilizou o código de <a href="https://github.com/karpathy/char-rnn"><strong>char-rnn</strong></a> na internet que possibilita que você treine uma <a href="ftp://ftp.dca.fee.unicamp.br/pub/docs/vonzuben/ia353_05/topico10_05.pdf">Rede Neural Recorrente</a> em textos para então poder gerar infinitos novos textos com estilo similar ao original. Você pode conferir seu ótimo <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">blog post</a> (em Inglês) explicando seus experimentos com <strong>char-rnn</strong>. O <strong>char</strong> no nome se refere ao fato de a rede tentar prever o próximo caractere dado os caracteres anteriores. Por exemplo, a rede aprende que o caractere &lsquo;a&rsquo; muito provavelmente deve vir depois da sequência de caracteres: &ldquo;cadeir&rdquo;.</p>
 
 <p>No post de Andrej, a rede é treinada para gerar trechos de Shakespeare, artigos do Wikipédia, códigos fonte do Linux e artigos de matemática. Desde então várias outras pessoas tem utilizado o código de <strong>char-rnn</strong> para gerar diferentes tipos de textos. Dentre estes, já foram gerados <a href="http://cpury.github.io/learning-holiness/">textos da bíblia</a>, <a href="https://highnoongmt.wordpress.com/2015/05/22/lisls-stis-recurrent-neural-networks-for-folk-music-generation/"><em>folk music</em></a> e <a href="https://medium.com/@samim/obama-rnn-machine-generated-political-speeches-c8abd18a2ea0">discursos do Obama</a>.</p>
 
@@ -262,6 +266,10 @@ Muito obrigada.</p>
 <p>Esse texto também ficou interessante. Caso tenha achado que esse texto ficou superior ao gerado pela <em>RNN</em>, eu devo alertar que essa não é uma comparação justa, pois há diferenças no algoritmo de amostragem que não tive tempo de igualar nos dois métodos. Além disso, o último método pode estar <a href="https://pt.wikipedia.org/wiki/Sobreajuste">sobreajustando</a> no conjunto de treinamento enquanto o primeiro me certifiquei que não estava. Uma comparação justa entre os dois métodos vai além do escopo desse post. </p>
 
 <p>Se quiser saber mais sobre as vantagens e desvantagens de cada método sugiro que leia o seguinte artigo: <a href="http://arxiv.org/abs/1506.02078">Visualizing and Understanding Recurrent Networks</a>. Uma das conclusões desse artigo e do <a href="http://nbviewer.ipython.org/gist/yoavg/d76121dfde2618422139#Unsmoothed-Maximum-Likelihood-Character-Level-Language-Model">post</a> do <a href="https://twitter.com/yoavgo">Yoav Goldberg</a> é que a <em>RNN</em> é melhor em aprender padrões de longo prazo como abrir e fechar parênteses, enquanto o método baseado em frequência não vai conseguir aprender esse padrão para sequências maiores do que 15.</p>
+
+<h3>Edits:</h3>
+
+<p><a href="https://www.reddit.com/r/brasil/comments/3i4g0w/programa_que_gera_novos_discursos_da_dilma_usando/">Discussão</a> no reddit.com/r/brasil</p>
 
 <p><br></br></p>
 

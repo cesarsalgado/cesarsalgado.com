@@ -4,6 +4,10 @@ published: true
 comments: true
 ---
 
+<p align="center">
+  <img src="/img/dilma_rnn.jpg" title="dilma-rnn robot"></img>
+</p>
+
 Recentemente Andrej Karpathy, doutorando em Ciência de Computação em Stanford, disponibilizou o código de [**char-rnn**](https://github.com/karpathy/char-rnn) na internet que possibilita que você treine uma [Rede Neural Recorrente](ftp://ftp.dca.fee.unicamp.br/pub/docs/vonzuben/ia353_05/topico10_05.pdf) em textos para então poder gerar infinitos novos textos com estilo similar ao original. Você pode conferir seu ótimo [blog post](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) (em Inglês) explicando seus experimentos com **char-rnn**. O **char** no nome se refere ao fato de a rede tentar prever o próximo caractere dado os caracteres anteriores. Por exemplo, a rede aprende que o caractere 'a' muito provavelmente deve vir depois da sequência de caracteres: "cadeir".
 
 No post de Andrej, a rede é treinada para gerar trechos de Shakespeare, artigos do Wikipédia, códigos fonte do Linux e artigos de matemática. Desde então várias outras pessoas tem utilizado o código de **char-rnn** para gerar diferentes tipos de textos. Dentre estes, já foram gerados [textos da bíblia](http://cpury.github.io/learning-holiness/), [*folk music*](https://highnoongmt.wordpress.com/2015/05/22/lisls-stis-recurrent-neural-networks-for-folk-music-generation/) e [discursos do Obama](https://medium.com/@samim/obama-rnn-machine-generated-political-speeches-c8abd18a2ea0).
@@ -129,6 +133,10 @@ A seguir é mostrado o resultado para o método descrito acima (utilizando uma j
 Esse texto também ficou interessante. Caso tenha achado que esse texto ficou superior ao gerado pela *RNN*, eu devo alertar que essa não é uma comparação justa, pois há diferenças no algoritmo de amostragem que não tive tempo de igualar nos dois métodos. Além disso, o último método pode estar [sobreajustando](https://pt.wikipedia.org/wiki/Sobreajuste) no conjunto de treinamento enquanto o primeiro me certifiquei que não estava. Uma comparação justa entre os dois métodos vai além do escopo desse post. 
 
 Se quiser saber mais sobre as vantagens e desvantagens de cada método sugiro que leia o seguinte artigo: [Visualizing and Understanding Recurrent Networks](http://arxiv.org/abs/1506.02078). Uma das conclusões desse artigo e do [post](http://nbviewer.ipython.org/gist/yoavg/d76121dfde2618422139#Unsmoothed-Maximum-Likelihood-Character-Level-Language-Model) do [Yoav Goldberg](https://twitter.com/yoavgo) é que a *RNN* é melhor em aprender padrões de longo prazo como abrir e fechar parênteses, enquanto o método baseado em frequência não vai conseguir aprender esse padrão para sequências maiores do que 15.
+
+### Edits:
+
+[Discussão](https://www.reddit.com/r/brasil/comments/3i4g0w/programa_que_gera_novos_discursos_da_dilma_usando/) no reddit.com/r/brasil
 
 <br></br>
 #### Notas
