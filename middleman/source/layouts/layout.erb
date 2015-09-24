@@ -95,6 +95,7 @@
     <script src="/js/application.js"></script>
 
 
+    <% if not development? %>
     <!-- Analytics
     ================================================== -->
     <script>
@@ -106,6 +107,7 @@
       ga('create', 'UA-66558584-1', 'auto');
       ga('send', 'pageview');
     </script>
+    <% end %>
 
   </body>
 </html>
