@@ -1,16 +1,13 @@
 404.html
-about
 academic
 apps
 blog
 contact
-content
 css
 curriculum
 dilma_rnn
 ico
 img
-index2
 index.html
 js
 more
