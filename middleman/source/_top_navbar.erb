@@ -63,6 +63,16 @@
               </li>
               -->
 
+              <% if development? && I18n.locale.to_s == 'en' %>
+              <!-- ml_book -->
+              <% if !defined?(ml_book_active) %>
+                <% ml_book_active = "" %>
+              <% end %>
+              <li class="<%= ml_book_active %>" >
+                <a href="/ml_book">ML-Book</a>
+              </li>
+              <% end %>
+
               <!-- Contact -->
               <% if !defined?(contact_active) %>
                 <% contact_active = "" %>
@@ -70,7 +80,6 @@
               <li class="<%= contact_active %>" >
                 <a href="<%= locale_base_path %>/contact"><%= I18n.t('topmenu.contact') %></a>
               </li>
-
 
               <!-- Apps -->
     <!--           <% if !defined?(apps_active) %>
