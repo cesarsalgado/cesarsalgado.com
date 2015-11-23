@@ -9,6 +9,7 @@ dilma_rnn
 ico
 img
 index.html
+ipython_notes_on_understanding_deep_image_representations_by_inverting_them
 js
 more
 pt
