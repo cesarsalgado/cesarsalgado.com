@@ -124,7 +124,7 @@
       <h1>IPython Notes on Understanding Deep Image Representations By Inverting Them</h1>
     </div>
 
-    <h4><time>Nov 19, 2015</time></h4>
+    <h4><time>Nov 23, 2015</time></h4>
     <br>
     <div id="post_content">
       <p><strong>Paper title</strong>: Understanding Deep Image Representations by Inverting Them</p>
@@ -175,7 +175,7 @@
 </pre></td></tr></tbody></table>
 </div>
 
-<p>Actually, the paper uses an equation a bit different from the above to make the guessing of the initial hyper-parameter easier. See section the section <strong>Balancing the different terms</strong> for more information.</p>
+<p>Actually, the paper uses an equation a bit different from the above to make the guessing of the initial hyper-parameter easier. See section <strong>Balancing the different terms</strong> for more information.</p>
 
 <p>The regularizer term is defined as the sum of two sub-terms: </p>
 <div class="highlight python"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
@@ -218,7 +218,7 @@
 
 <p>The optimization problem is then solved by using SGD with momentum as all the parts of the loss function are differentiable on x (including off course cnn_fc3).</p>
 
-<p>To visualize the representation of HOG and DSIFT the authors first build these methods using the CNN layers so it becomes easy to differentiate on the input. The algorithm is the proceeded in the same way as described before.</p>
+<p>To visualize the representation of HOG and DSIFT the authors first build these methods using the CNN layers so it becomes easy to differentiate on the input. The algorithm then proceeds as before.</p>
 
 <h2>Experiments</h2>
 
@@ -240,13 +240,13 @@
 
 <p>The last paper from above has also made available their code: <a href="https://github.com/yosinski/deep-visualization-toolbox">https://github.com/yosinski/deep-visualization-toolbox</a></p>
 
-<p>I read this paper, because I started reading the paper <a href="http://arxiv.org/abs/1508.06576">A Neural Algorithm of Artistic Style</a> and I thought I needed first to read some of its references. So probably my next notes will be about the above paper and the following former work by the same authors: <a href="arxiv.org/abs/1505.07376">Texture Synthesis Using Convolutional Neural Networks</a></p>
+<p>I read this paper, because I started reading <a href="http://arxiv.org/abs/1508.06576">A Neural Algorithm of Artistic Style</a> and I thought I needed first to read some of its references. So probably my next notes will be about the above paper and the following former work by the same authors: <a href="arxiv.org/abs/1505.07376">Texture Synthesis Using Convolutional Neural Networks</a></p>
 
 <h4>The Fine Print</h4>
 
 <p><sub>These notes are similar in spirit to <a href="https://twitter.com/hugo_larochelle">https://twitter.com/hugo_larochelle</a> notes that he announces in his Twitter. The only difference is that from time to time I will also write notes in Jupyter Notebook and insert some small code samples to understand better the concepts exposed in the papers. The code is not meant to reproduce the paper and sometimes may not even be runnable as I pretend not to spend too much time on every paper I read. Sometimes I may wish to dig deeper into a paper and try to reproduce the results, but then I will tag the blog post in a different section of my blog.</sub></p>
 
-<p><sub><strong>Post generated from the following IPython Notebook</strong>: <a href="https://github.com/cesarsalgado/cesarsalgado.github.io/blob/master/middleman/source/posts/notebooks/2015-11-19-ipython_notes_on_understanding_deep_image_representations_by_inverting_them-en.ipynb">https://github.com/cesarsalgado/cesarsalgado.github.io/blob/master/middleman/source/posts/notebooks/2015-11-19-ipython_notes_on_understanding_deep_image_representations_by_inverting_them-en.ipynb</a></sub></p>
+<p><sub><strong>Post generated from the following IPython Notebook</strong>: <a href="https://github.com/cesarsalgado/cesarsalgado.github.io/blob/master/middleman/source/posts/notebooks/2015-11-23-ipython_notes_on_understanding_deep_image_representations_by_inverting_them-en.ipynb">https://github.com/cesarsalgado/cesarsalgado.github.io/blob/master/middleman/source/posts/notebooks/2015-11-23-ipython_notes_on_understanding_deep_image_representations_by_inverting_them-en.ipynb</a></sub></p>
 
     </div>
     <hr></hr>

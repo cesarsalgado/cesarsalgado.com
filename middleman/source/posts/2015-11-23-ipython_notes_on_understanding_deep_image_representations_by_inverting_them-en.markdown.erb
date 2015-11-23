@@ -54,7 +54,7 @@ But we also need to restrict the possible xr to look natural. So the paper adds 
 xr = argmin( lambda x: sum( ((cnn_fc3(x)-h)**2) + regularizer(x) ) )
 ```
 
-Actually, the paper uses an equation a bit different from the above to make the guessing of the initial hyper-parameter easier. See section the section **Balancing the different terms** for more information.
+Actually, the paper uses an equation a bit different from the above to make the guessing of the initial hyper-parameter easier. See section **Balancing the different terms** for more information.
 
 The regularizer term is defined as the sum of two sub-terms: 
 
@@ -82,7 +82,7 @@ def total_variation(x):
 
 The optimization problem is then solved by using SGD with momentum as all the parts of the loss function are differentiable on x (including off course cnn_fc3).
 
-To visualize the representation of HOG and DSIFT the authors first build these methods using the CNN layers so it becomes easy to differentiate on the input. The algorithm is the proceeded in the same way as described before.
+To visualize the representation of HOG and DSIFT the authors first build these methods using the CNN layers so it becomes easy to differentiate on the input. The algorithm then proceeds as before.
 
 ## Experiments
 
@@ -104,10 +104,10 @@ I hope papers like this one ends the myth that Neural Nets are black box algorit
 
 The last paper from above has also made available their code: [https://github.com/yosinski/deep-visualization-toolbox](https://github.com/yosinski/deep-visualization-toolbox)
 
-I read this paper, because I started reading the paper [A Neural Algorithm of Artistic Style](http://arxiv.org/abs/1508.06576) and I thought I needed first to read some of its references. So probably my next notes will be about the above paper and the following former work by the same authors: [Texture Synthesis Using Convolutional Neural Networks](arxiv.org/abs/1505.07376)
+I read this paper, because I started reading [A Neural Algorithm of Artistic Style](http://arxiv.org/abs/1508.06576) and I thought I needed first to read some of its references. So probably my next notes will be about the above paper and the following former work by the same authors: [Texture Synthesis Using Convolutional Neural Networks](arxiv.org/abs/1505.07376)
 
 #### The Fine Print
 
 <sub>These notes are similar in spirit to [https://twitter.com/hugo_larochelle](https://twitter.com/hugo_larochelle) notes that he announces in his Twitter. The only difference is that from time to time I will also write notes in Jupyter Notebook and insert some small code samples to understand better the concepts exposed in the papers. The code is not meant to reproduce the paper and sometimes may not even be runnable as I pretend not to spend too much time on every paper I read. Sometimes I may wish to dig deeper into a paper and try to reproduce the results, but then I will tag the blog post in a different section of my blog.</sub>
 
-<sub>**Post generated from the following IPython Notebook**: [https://github.com/cesarsalgado/cesarsalgado.github.io/blob/master/middleman/source/posts/notebooks/2015-11-19-ipython\_notes\_on\_understanding\_deep\_image\_representations\_by\_inverting\_them-en.ipynb](https://github.com/cesarsalgado/cesarsalgado.github.io/blob/master/middleman/source/posts/notebooks/2015-11-19-ipython\_notes\_on\_understanding\_deep\_image\_representations\_by\_inverting\_them-en.ipynb)</sub>
+<sub>**Post generated from the following IPython Notebook**: [https://github.com/cesarsalgado/cesarsalgado.github.io/blob/master/middleman/source/posts/notebooks/2015-11-23-ipython\_notes\_on\_understanding\_deep\_image\_representations\_by\_inverting\_them-en.ipynb](https://github.com/cesarsalgado/cesarsalgado.github.io/blob/master/middleman/source/posts/notebooks/2015-11-23-ipython\_notes\_on\_understanding\_deep\_image\_representations\_by\_inverting\_them-en.ipynb)</sub>

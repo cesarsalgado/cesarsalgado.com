@@ -2,7 +2,7 @@ import os
 import sys
 import re
 
-def make_modifications(text, file_name):
+def make_modifications(text, file_name, publish):
     text = text[text.find('\n')+1:]
     img_pattern = "![notebook_image]("
     text = re.sub(r'([^\(])(https?://[^\s$]+)([^\)])', r'\1[\2](\2)\3', text)
@@ -10,7 +10,7 @@ def make_modifications(text, file_name):
     end = file_name.rfind('-')
     start = file_name.rfind('-', 0, end)+1
     title = file_name[start:end].replace('_', ' ').title().replace('Ipython', 'IPython').replace(' On ', ' on ')
-    text = "---\ntitle: {title}\npublished: false\ncomments: false\n---\n\n".format(title=title) + text
+    text = "---\ntitle: {title}\npublished: {publish}\ncomments: {publish}\n---\n\n".format(title=title, publish=publish) + text
     notebook_url = "https://github.com/cesarsalgado/cesarsalgado.github.io/blob/master/middleman/source/posts/notebooks/" + file_name + '.ipynb'
     text = text + "\n\n<sub>**Post generated from the following IPython Notebook**: [{notebook_url}]({notebook_url})</sub>".format(notebook_url=notebook_url.replace('_', '\_'))
     return text
@@ -25,7 +25,10 @@ def main():
     os.system(cmd2)
     with open(erb_file_path, 'r') as f:
         text = f.read().strip()
-    text = make_modifications(text, file_name)
+    publish = 'false'
+    if len(sys.argv) > 2 and sys.argv[2] == 'true':
+        publish = 'true'
+    text = make_modifications(text, file_name, publish)
     with open(erb_file_path, 'w') as f:
         f.write(text)
 
