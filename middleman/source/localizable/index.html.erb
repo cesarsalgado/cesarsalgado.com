@@ -21,18 +21,17 @@ layout: layout
       <h2><%= I18n.t('home.news') %></h2>
     </div>
     <% n_articles = 0 %>
+    <% abv2lang = {'en' => '(english)', 'pt' => '(português)'} %>
     <% if I18n.locale.to_s == 'pt' %>
       <% date_format = "%d/%m/%Y" %>
     <% else %>
       <% date_format = "%b %d, %Y" %>
     <% end %>
     <% blog.articles.each do |article| %>
-      <% if article.lang.to_s == I18n.locale.to_s %>
-        <p class="lead"><time><%= article.date.strftime(date_format) %></time> - <a href="<%= article.url %>"><%= article.title %></a></p>
-        <% n_articles += 1 %>
-        <% if n_articles >= 2 %>
-          <% break %>
-        <% end %>
+      <p class="lead"><time><%= article.date.strftime(date_format) %></time> - <a href="<%= article.url %>"><%= article.title %> <%= abv2lang[article.lang.to_s] %></a></p>
+      <% n_articles += 1 %>
+      <% if n_articles >= 10 %>
+        <% break %>
       <% end %>
     <% end %>
     <% if (n_articles == 0) and true %>

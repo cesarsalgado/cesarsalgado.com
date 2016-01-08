@@ -25,6 +25,11 @@ layout: layout
     <% if n_articles == 0 %>
       <p class="lead"><%= I18n.t("blog.no_posts_yet") %></p>
     <% end %>
+    <% if I18n.locale.to_s == 'en' %>
+      <p class="lead"><a href="/pt/blog">Clique aqui para ver outros blog posts escritos em português.</a></p>
+    <% else %>
+      <p class="lead"><a href="/blog">Click here to list other blog posts written in English.</a></p>
+    <% end %>
     <% if I18n.locale.to_s == 'en' and false %>
     <hr></hr>
     <div class="row">
